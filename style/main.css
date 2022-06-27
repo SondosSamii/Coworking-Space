@@ -95,11 +95,11 @@ body .overlay {
 }
 body .overlay .home-overlay.right {
   right: -50%;
-  background-image: url(../images/home/Ellipse\ 39.svg);
+  background-image: url(../images/home/Ellipse-39.svg);
 }
 body .overlay .home-overlay.left {
   left: -50%;
-  background-image: url(../images/home/Ellipse\ 38.svg);
+  background-image: url(../images/home/Ellipse-38.svg);
 }
 
 nav.navbar {
