@@ -1,0 +1,46 @@
+@media (min-width: 992px) {
+    .home {
+        h1 {
+            font-size: 54px;
+            max-width: 474.3px;
+            text-align: left;
+
+            &::before {
+                left: auto;
+                transform: translateX(0);
+            }
+        }
+
+        .imgs-box {
+            .main {
+                height: $main-space-height;
+                object-fit: none;
+            }
+
+            .ellipse {
+                &.one {
+                    transform: translate(-58%, -32px);
+                }
+
+                &.two {
+                    opacity: 1;
+                    transform: translateY(150%);
+                }
+
+                &.three {
+                    opacity: 1;
+                    transform: translate(139px, 126px);
+                }
+            }
+
+            span {
+                bottom: 0;
+                font-size: 51.2px;
+            }
+        }
+
+        .people {
+            transform: translateY(-45px);
+        }
+    }
+}

@@ -58,5 +58,197 @@
   font-weight: 600;
   src: url("fonts/gilroy-font/Gilroy-SemiBold.eot"), url("fonts/gilroy-font/Gilroy-SemiBold.woff") format("woff"), url("fonts/gilroy-font/Gilroy-SemiBold.ttf") format("truetype");
 }
+.home .imgs-box .main {
+  border-top-right-radius: 300px;
+  border-top-left-radius: 300px;
+}
+
+body .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body .overlay .home-overlay {
+  position: absolute;
+  top: -50vh;
+  width: 100%;
+  height: 100vh;
+  filter: blur(300px);
+  z-index: -1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+body .overlay {
+  overflow-x: hidden;
+}
+body .overlay .home-overlay.right {
+  right: -50%;
+  background-image: url(../images/home/Ellipse\ 39.svg);
+}
+body .overlay .home-overlay.left {
+  left: -50%;
+  background-image: url(../images/home/Ellipse\ 38.svg);
+}
+
+nav.navbar {
+  width: 100%;
+  z-index: 9;
+}
+nav.navbar-light .navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Cera Pro Medium";
+  font-size: 29.3px;
+  font-weight: 500;
+  color: #000;
+}
+nav.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+nav.navbar-light .navbar-nav {
+  text-align: center;
+}
+nav.navbar-light .navbar-nav .nav-link {
+  font-family: "Cera Pro Medium";
+  font-size: 16.7px;
+  text-transform: uppercase;
+  color: #686c75;
+}
+
+.home {
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.home > .container {
+  padding-top: 56px;
+}
+.home h1 {
+  font-family: "Axiforma Bold";
+  line-height: 1.15;
+  text-align: center;
+  color: #000;
+  position: relative;
+}
+.home h1::before {
+  content: url(../images/home/zigzag-border.svg);
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home .imgs-box {
+  max-width: fit-content;
+  position: relative;
+}
+.home .imgs-box .main {
+  width: 100%;
+  max-width: 476px;
+  max-height: 690px;
+  object-fit: cover;
+  object-position: center -20px;
+}
+.home .imgs-box .ellipse {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 56.4px 175.5px 0 rgba(255, 200, 118, 0.35);
+}
+.home .imgs-box .ellipse.one {
+  transform: scale(0.8) translate(-90%, -3rem);
+}
+.home .imgs-box .ellipse.two {
+  opacity: 0;
+}
+.home .imgs-box .ellipse.three {
+  opacity: 0;
+}
+.home .imgs-box .v-text {
+  font-family: "Axiforma Bold";
+  font-size: 2.5rem;
+  line-height: 1.31;
+  color: #000;
+  position: absolute;
+  bottom: 1rem;
+  transform: rotate(180deg) translateX(-12.5px);
+  writing-mode: vertical-lr;
+  opacity: 0.1;
+}
+.home .people {
+  position: relative;
+}
+.home .people img:not(:first-child) {
+  margin-left: -12px;
+}
+.home .people span {
+  font-family: "Avenir Medium";
+}
+.home .people span.people-num {
+  font-size: 10.4px;
+  font-weight: 900;
+  line-height: 3.54;
+  color: #fff;
+  margin-left: -32px;
+}
+.home .people span.visits {
+  font-size: 12.5px;
+  line-height: 2.95;
+  color: #000;
+  margin-left: 12px;
+}
+.home .brands .grey-border {
+  width: 110px;
+  height: 24px;
+  background-color: #686c75;
+}
+
+@media (min-width: 992px) {
+  .home h1 {
+    font-size: 54px;
+    max-width: 474.3px;
+    text-align: left;
+  }
+  .home h1::before {
+    left: auto;
+    transform: translateX(0);
+  }
+  .home .imgs-box .main {
+    height: 690px;
+    object-fit: none;
+  }
+  .home .imgs-box .ellipse.one {
+    transform: translate(-58%, -32px);
+  }
+  .home .imgs-box .ellipse.two {
+    opacity: 1;
+    transform: translateY(150%);
+  }
+  .home .imgs-box .ellipse.three {
+    opacity: 1;
+    transform: translate(139px, 126px);
+  }
+  .home .imgs-box span {
+    bottom: 0;
+    font-size: 51.2px;
+  }
+  .home .people {
+    transform: translateY(-45px);
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
