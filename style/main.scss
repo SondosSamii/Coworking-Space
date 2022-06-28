@@ -14,10 +14,9 @@ body {
 
     .overlay {
         @extend %overlay;
-        overflow-x: hidden;
 
         .home-overlay {
-            @extend %blurOverlay;
+            @include blurOverlay(-50vh);
 
             &.right {
                 right: -50%;
@@ -93,22 +92,16 @@ nav {
     }
 
     .imgs-box {
-        max-width: fit-content;
-        position: relative;
 
         .main {
-            width: 100%;
-            max-width: $main-space-width;
-            max-height: $main-space-height;
-            object-fit: cover;
+            @include mainBanner(476px, 690px);
             object-position: center -20px;
-            @extend %top-border-radius;
         }
 
         .ellipse {
             position: absolute;
             border-radius: 50%;
-            box-shadow: 0 56.4px 175.5px 0 $shadow-color;
+            box-shadow: $ellipse-shadow;
 
             &.one {
                 transform: scale(0.8) translate(-90%, -3rem);
@@ -130,13 +123,14 @@ nav {
             color: #000;
             position: absolute;
             bottom: 1rem;
-            transform: rotate(180deg) translateX(-12.5px);
+            transform: rotate(180deg);
             writing-mode: vertical-lr;
             opacity: 0.1;
         }
     }
 
     .people {
+        text-align: center;
         position: relative;
 
         img:not(:first-child) {
@@ -144,7 +138,7 @@ nav {
         }
 
         span {
-            font-family: 'Avenir Medium';
+            font-family: 'Avenir Roman';
 
             &.people-num {
                 position: absolute;
@@ -168,10 +162,9 @@ nav {
             }
 
             &.visits {
+                display: block;
                 font-size: 12.5px;
-                line-height: 2.95;
                 color: #000;
-                margin-left: 30px;
             }
         }
     }
@@ -185,4 +178,75 @@ nav {
     }
 }
 
-@import "mediaqueries";
+.services {
+    position: relative;
+    overflow-x: hidden;
+
+    .imgs-box {
+
+        .main {
+            @include mainBanner(450.3px, 653px);
+            // object-position: center -20px;
+        }
+
+        .calendar {
+            position: absolute;
+            right: -36px;
+            bottom: 36px;
+            box-shadow: $light-box-shadow;
+        }
+
+        .alarm {
+            position: absolute;
+            right: 50px;
+            bottom: 114px;
+            border-radius: 50%;
+            box-shadow: $light-box-shadow;
+        }
+    }
+
+    .buttons {
+        margin-bottom: 36px;
+        text-align: center;
+
+        .secondary-btn {
+
+            i {
+                width: 36px;
+                height: 36px;
+                font-size: 1.5em;
+                border: 1px solid $main-color-w-opacity;
+                border-radius: 50%;
+                text-align: center;
+                padding-top: 4px;
+                margin-right: 15px;
+            }
+
+            span {
+                display: inline-block;
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    .overlay {
+        @extend %overlay;
+
+        .circles {
+            position: absolute;
+            min-width: 276px;
+            min-height: 372px;
+            top: 0;
+            right: 0;
+            background-image: url(../images/services/Group-35.svg);
+            background-repeat: no-repeat;
+        }
+
+        .yellow-bg {
+            @include blurOverlay(100%);
+            background-color: $main-yellow;
+        }
+    }
+}
+
+@import "media-queries";

@@ -1,3 +1,16 @@
+@media (min-width: 768px) {
+    .home {
+        .people {
+            text-align: start;
+
+            span.visits {
+                display: inline;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
 @media (min-width: 992px) {
     .home {
         h1 {
@@ -13,7 +26,6 @@
 
         .imgs-box {
             .main {
-                height: $main-space-height;
                 object-fit: none;
             }
 
@@ -24,23 +36,46 @@
 
                 &.two {
                     opacity: 1;
-                    transform: translateY(150%);
+                    transform: translateY(200px);
                 }
 
                 &.three {
                     opacity: 1;
-                    transform: translate(139px, 126px);
+                    transform: translate(100px, 126px);
                 }
             }
 
             .v-text {
                 bottom: 0;
                 font-size: 51.2px;
+                transform: rotate(180deg) translateX(-12.5px);
             }
         }
 
         .people {
             transform: translateY(-45px);
         }
+    }
+
+    .services {
+        .imgs-box {
+            .calendar {
+                right: -68px;
+                bottom: 36px;
+            }
+
+            .alarm {
+                right: 18px;
+                bottom: 114px;
+            }
+        }
+
+        .buttons {
+            text-align: start;
+        }
+    }
+
+    section header {
+        text-align: start;
     }
 }

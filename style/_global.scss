@@ -1,21 +1,98 @@
-%top-border-radius {
-    border-top-right-radius: 300px;
-    border-top-left-radius: 300px;
-}
-
 %overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: -1;
+    overflow: hidden;
 }
 
-%blurOverlay {
+@mixin blurOverlay ($top) {
     position: absolute;
-    top: -50vh;
+    top: $top;
     width: 100%;
     height: 100vh;
     filter: blur(400px);
     z-index: -1;
+}
+
+@mixin mainBanner ($width, $height) {
+    width: 100%;
+    max-width: $width;
+    max-height: $height;
+    object-fit: cover;
+    border-top-right-radius: 300px;
+    border-top-left-radius: 300px;
+}
+
+.imgs-box {
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+section header {
+    text-align: center;
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    h2 {
+        font-family: 'Gilroy SemiBold';
+        font-size: 18.8px;
+        letter-spacing: 1px;
+        color: $main-color;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-family: 'Gilroy Medium';
+        font-size: 52.2px;
+        line-height: 1.36;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: 'Avenir Roman';
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 2.36;
+        color: #000;
+    }
+}
+
+button {
+    height: 56px;
+    font-family: 'Gilroy Medium';
+    font-size: 16.7px;
+    transition: all 0.3s ease-in-out;
+
+    &.main-btn {
+        color: #fff;
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+
+        &:hover,
+        &:focus {
+            color: $main-color;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    &.secondary-btn {
+        color: $main-color;
+        background-color: transparent;
+        border: none;
+
+        &:hover,
+        &:focus {
+            color: $main-color;
+            box-shadow: none;
+        }
+    }
 }
