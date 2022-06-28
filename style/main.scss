@@ -18,12 +18,12 @@ body {
         .home-overlay {
             @include blurOverlay(-50vh);
 
-            &.right {
+            &.lightblue-bg {
                 right: -50%;
                 background-color: $main-lightblue;
             }
 
-            &.left {
+            &.yellow-bg {
                 left: -50%;
                 background-color: $main-yellow;
             }
