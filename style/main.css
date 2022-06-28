@@ -136,9 +136,6 @@ nav.navbar-light .navbar-nav .nav-link {
   overflow: hidden;
   position: relative;
 }
-.home > .container {
-  padding-top: 56px;
-}
 .home h1 {
   font-family: "Axiforma Bold";
   line-height: 1.15;

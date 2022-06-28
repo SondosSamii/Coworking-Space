@@ -34,9 +34,7 @@ body {
 
 nav {
     &.navbar {
-        // position: fixed;
         width: 100%;
-        // height: $navbar-height;
         z-index: 9;
     }
 
@@ -77,10 +75,6 @@ nav {
     align-items: center;
     overflow: hidden;
     position: relative;
-
-    >.container {
-        padding-top: $navbar-height;
-    }
 
     h1 {
         font-family: 'Axiforma Bold';
