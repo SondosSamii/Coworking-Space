@@ -11,23 +11,18 @@ body {
     backdrop-filter: blur(50px);
     background-color: rgba(255, 255, 255, 0.9);
     position: relative;
+    overflow-x: hidden;
 
-    .overlay {
-        @extend %overlay;
+    .lightblue-bg {
+        @include blurBgLayer(-50vh, 100vh);
+        right: -50%;
+        background-color: $main-lightblue;
+    }
 
-        .home-overlay {
-            @include blurOverlay(-50vh);
-
-            &.lightblue-bg {
-                right: -50%;
-                background-color: $main-lightblue;
-            }
-
-            &.yellow-bg {
-                left: -50%;
-                background-color: $main-yellow;
-            }
-        }
+    .yellow-bg {
+        @include blurBgLayer(-50vh, 100vh);
+        left: -50%;
+        background-color: $main-yellow;
     }
 }
 
@@ -99,12 +94,8 @@ nav {
         }
 
         .ellipse {
-            position: absolute;
-            border-radius: 50%;
-            box-shadow: $ellipse-shadow;
-
             &.one {
-                transform: scale(0.8) translate(-90%, -3rem);
+                transform: scale(0.65) translate(-90%, -70%);
             }
 
             &.two {
@@ -206,7 +197,6 @@ nav {
     }
 
     .buttons {
-        margin-bottom: 36px;
         text-align: center;
 
         .secondary-btn {
@@ -229,23 +219,109 @@ nav {
         }
     }
 
-    .overlay {
-        @extend %overlay;
+    .circles-bg {
+        position: absolute;
+        min-width: 276px;
+        min-height: 372px;
+        top: 0;
+        right: 0;
+        background-image: url(../images/services/Group-35.svg);
+        background-repeat: no-repeat;
+    }
 
-        .circles {
-            position: absolute;
-            min-width: 276px;
-            min-height: 372px;
-            top: 0;
-            right: 0;
-            background-image: url(../images/services/Group-35.svg);
-            background-repeat: no-repeat;
+    .yellow-bg {
+        @include blurBgLayer(100%, 10vh);
+        background-color: $main-yellow;
+    }
+}
+
+.visions {
+    // padding-top: $gutter;
+    padding-bottom: $gutter;
+    position: relative;
+
+    .sub-header {
+        display: flex;
+        padding-bottom: calc($gutter / 2);
+
+        i {
+            font-size: 1.25rem;
+            position: relative;
+
+            &.one::after {
+                @include iconBg(#fcd25f);
+            }
+
+            &.two::after {
+                @include iconBg(#13ded2);
+            }
+
+            &.three::after {
+                @include iconBg(#1ac8f9);
+            }
         }
 
-        .yellow-bg {
-            @include blurOverlay(100%);
-            background-color: $main-yellow;
+        header {
+            padding-left: 10px;
+
+            h4 {
+                font-family: 'Gilroy Medium';
+                font-size: 16.7px;
+                color: #000;
+            }
+
+            p {
+                font-family: 'Avenir Book';
+                font-size: 13.6px;
+                line-height: 1.84;
+                color: #000;
+            }
         }
+    }
+
+    .main-btn {
+        margin-top: $gutter;
+        padding-right: $gutter;
+        padding-left: $gutter;
+    }
+
+    .pale-bg {
+        width: 100%;
+        max-width: 445.1px;
+        height: 353.1px;
+        border-top-left-radius: 146.3px;
+        background-color: $pale-yellow;
+        margin-top: 62px;
+        position: relative;
+        margin: auto;
+
+        .ellipse {
+            &.one {
+                transform: scale(0.65) translate(-25%, -45%);
+            }
+
+            &.two {
+                bottom: 30%;
+                transform: scale(0.65) translateY(125%);
+            }
+
+            &.three {
+                right: -25%;
+                transform: scale(0.65) translateY(50%);
+            }
+
+            &.four {
+                right: 0;
+                transform: scale(0.75) translateY(-115%);
+            }
+        }
+    }
+
+    .bg-layer {
+        background-image: url(../images/visions/Vector-36.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }
 

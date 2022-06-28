@@ -1,4 +1,16 @@
 @media (min-width: 768px) {
+    header.main-header {
+        h2 {
+            font-size: 18.8px;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 52.2px;
+            line-height: 1.36;
+        }
+    }
+
     .home {
         .people {
             text-align: start;
@@ -6,6 +18,26 @@
             span.visits {
                 display: inline;
                 margin-left: 20px;
+            }
+        }
+    }
+
+    .visions {
+        .pale-bg .ellipse {
+            &.one {
+                transform: scale(0.75) translate(0%, -30%);
+            }
+
+            &.two {
+                transform: scale(0.75) translate(20%, 100%);
+            }
+
+            &.three {
+                transform: scale(0.75) translateY(40%);
+            }
+
+            &.four {
+                transform: scale(0.75) translate(25%, -90%);
             }
         }
     }
@@ -71,11 +103,47 @@
         }
 
         .buttons {
+            margin-bottom: 36px;
             text-align: start;
         }
     }
 
-    section header {
+    header.main-header {
         text-align: start;
+    }
+
+    .visions {
+        .pale-bg {
+            .ellipse {
+                &.one {
+                    top: -15%;
+                    left: 23%;
+                    transform: translate(0);
+                }
+
+                &.two {
+                    top: 85%;
+                    left: 0.5%;
+                    transform: translate(0);
+                }
+
+                &.three {
+                    top: 55%;
+                    left: 80%;
+                    transform: translate(0);
+                }
+
+                &.four {
+                    right: 0;
+                    bottom: 100%;
+                    transform: translate(0);
+                }
+            }
+        }
+
+        .bg-layer {
+            background-position: 35% 75%;
+            background-size: auto;
+        }
     }
 }
