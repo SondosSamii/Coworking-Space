@@ -1,3 +1,10 @@
+@media (min-width: 640px) {
+    .solutions .carousel-box {
+        margin-right: -150px;
+
+    }
+}
+
 @media (min-width: 768px) {
     header.main-header {
         h2 {
@@ -144,6 +151,17 @@
         .bg-layer {
             background-position: 35% 75%;
             background-size: auto;
+        }
+    }
+
+    .solutions {
+        .carousel-box {
+            margin-right: -200px;
+
+            .item {
+                max-width: 532.8px;
+                height: 710.4px;
+            }
         }
     }
 }
