@@ -103,6 +103,18 @@ header.main-header p {
   color: #000;
 }
 
+header.sub-header h4 {
+  font-family: "Gilroy Medium";
+  font-size: 16.7px;
+  color: #000;
+}
+header.sub-header p {
+  font-family: "Avenir Book";
+  font-size: 13.6px;
+  line-height: 1.84;
+  color: #000;
+}
+
 button {
   height: 56px;
   font-family: "Gilroy Medium";
@@ -346,15 +358,15 @@ nav.navbar-light .navbar-nav .nav-link {
   padding-bottom: 32px;
   position: relative;
 }
-.visions .sub-header {
+.visions .vision {
   display: flex;
   padding-bottom: 16px;
 }
-.visions .sub-header i {
+.visions .vision i {
   font-size: 1.25rem;
   position: relative;
 }
-.visions .sub-header i.one::after {
+.visions .vision i.one::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -365,7 +377,7 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #fcd25f;
 }
-.visions .sub-header i.two::after {
+.visions .vision i.two::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -376,7 +388,7 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #13ded2;
 }
-.visions .sub-header i.three::after {
+.visions .vision i.three::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -387,19 +399,8 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #1ac8f9;
 }
-.visions .sub-header header {
+.visions header.sub-header {
   padding-left: 10px;
-}
-.visions .sub-header header h4 {
-  font-family: "Gilroy Medium";
-  font-size: 16.7px;
-  color: #000;
-}
-.visions .sub-header header p {
-  font-family: "Avenir Book";
-  font-size: 13.6px;
-  line-height: 1.84;
-  color: #000;
 }
 .visions .main-btn {
   margin-top: 32px;
@@ -455,6 +456,21 @@ nav.navbar-light .navbar-nav .nav-link {
   border-radius: 10px;
   object-fit: cover;
   object-position: 5%;
+}
+
+.benefits .benefit {
+  margin-bottom: 16px;
+}
+.benefits .benefit header.sub-header {
+  margin-top: 32px;
+}
+.benefits .benefit header.sub-header h4 {
+  font-size: 20.9px;
+  margin-bottom: 16px;
+}
+.benefits .benefit header.sub-header p {
+  font-size: 12.5px;
+  line-height: 1.99;
 }
 
 @media (min-width: 640px) {

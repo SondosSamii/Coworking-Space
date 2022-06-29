@@ -238,7 +238,7 @@ nav {
     padding-bottom: $gutter;
     position: relative;
 
-    .sub-header {
+    .vision {
         display: flex;
         padding-bottom: calc($gutter / 2);
 
@@ -258,23 +258,10 @@ nav {
                 @include iconBg(#1ac8f9);
             }
         }
+    }
 
-        header {
-            padding-left: 10px;
-
-            h4 {
-                font-family: 'Gilroy Medium';
-                font-size: 16.7px;
-                color: #000;
-            }
-
-            p {
-                font-family: 'Avenir Book';
-                font-size: 13.6px;
-                line-height: 1.84;
-                color: #000;
-            }
-        }
+    header.sub-header {
+        padding-left: 10px;
     }
 
     .main-btn {
@@ -340,6 +327,26 @@ nav {
                 border-radius: 10px;
                 object-fit: cover;
                 object-position: 5%;
+            }
+        }
+    }
+}
+
+.benefits {
+    .benefit {
+        margin-bottom: calc($gutter / 2);
+
+        header.sub-header {
+            margin-top: $gutter;
+
+            h4 {
+                font-size: 20.9px;
+                margin-bottom: calc($gutter / 2);
+            }
+
+            p {
+                font-size: 12.5px;
+                line-height: 1.99;
             }
         }
     }

@@ -76,6 +76,21 @@ header.main-header {
     }
 }
 
+header.sub-header {
+    h4 {
+        font-family: 'Gilroy Medium';
+        font-size: 16.7px;
+        color: #000;
+    }
+
+    p {
+        font-family: 'Avenir Book';
+        font-size: 13.6px;
+        line-height: 1.84;
+        color: #000;
+    }
+}
+
 button {
     height: 56px;
     font-family: 'Gilroy Medium';
