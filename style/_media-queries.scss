@@ -13,8 +13,8 @@
         }
 
         h3 {
-            font-size: 52.2px;
-            line-height: 1.36;
+            font-size: 48px;
+            line-height: 1.25;
         }
     }
 
@@ -61,23 +61,8 @@
                 "banner banner .";
             column-gap: calc($gutter / 2);
 
-            header.main-header {
-
-                // grid-area: header;
-            }
-
-            .buttons {
-
-                // grid-area: buttons;
-                button {
-                    // display: block;
-                }
-            }
-
             .main-banner {
-                // grid-area: banner;
                 width: 75%;
-                // margin-left: auto;
             }
         }
     }
@@ -209,9 +194,37 @@
             column-gap: calc($gutter / 2);
         }
     }
+
+    .environment {
+        .environment-grid {
+            grid-template-areas:
+                "header header header banner banner"
+                "header header header banner banner"
+                "header header header banner banner"
+                "buttons buttons buttons banner banner";
+            grid-template-columns: repeat(5, 1fr);
+            row-gap: $gutter;
+            column-gap: $gutter;
+
+            header.main-header {
+                text-align: start;
+            }
+
+            .main-banner {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (min-width: 1200px) {
+    header.main-header {
+        h3 {
+            font-size: 52.2px;
+            line-height: 1.36;
+        }
+    }
+
     .gallery {
         .gallery-grid {
             grid-template-areas:

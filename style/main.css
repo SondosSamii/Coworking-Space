@@ -547,8 +547,8 @@ nav.navbar-light .navbar-nav .nav-link {
     letter-spacing: 1px;
   }
   header.main-header h3 {
-    font-size: 52.2px;
-    line-height: 1.36;
+    font-size: 48px;
+    line-height: 1.25;
   }
 
   .home .people {
@@ -673,8 +673,26 @@ nav.navbar-light .navbar-nav .nav-link {
     row-gap: 16px;
     column-gap: 16px;
   }
+
+  .environment .environment-grid {
+    grid-template-areas: "header header header banner banner" "header header header banner banner" "header header header banner banner" "buttons buttons buttons banner banner";
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+  .environment .environment-grid header.main-header {
+    text-align: start;
+  }
+  .environment .environment-grid .main-banner {
+    width: 100%;
+  }
 }
 @media (min-width: 1200px) {
+  header.main-header h3 {
+    font-size: 52.2px;
+    line-height: 1.36;
+  }
+
   .gallery .gallery-grid {
     grid-template-areas: "header header header banner" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
     row-gap: 32px;
