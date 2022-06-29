@@ -592,5 +592,11 @@ nav.navbar-light .navbar-nav .nav-link {
     height: 710.4px;
   }
 }
+@media (min-width: 1366px) {
+  .benefits .benefit {
+    flex: 1 0 0%;
+    width: auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
