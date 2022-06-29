@@ -235,7 +235,9 @@ nav {
 }
 
 .visions {
+    padding-top: $gutter;
     padding-bottom: $gutter;
+    margin-bottom: $gutter;
     position: relative;
 
     .vision {

@@ -82,8 +82,6 @@
 
 header.main-header {
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 header.main-header h2 {
   font-family: "Gilroy SemiBold";
@@ -355,7 +353,9 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .visions {
+  padding-top: 32px;
   padding-bottom: 32px;
+  margin-bottom: 32px;
   position: relative;
 }
 .visions .vision {
@@ -595,8 +595,6 @@ nav.navbar-light .navbar-nav .nav-link {
 
   header.main-header {
     text-align: start;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 
   .visions .pale-bg .ellipse.one {
