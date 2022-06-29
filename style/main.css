@@ -514,6 +514,28 @@ nav.navbar-light .navbar-nav .nav-link {
   object-position: center;
 }
 
+.environment {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.environment .environment-grid {
+  display: grid;
+  grid-template-areas: "header" "banner" "buttons";
+  row-gap: 16px;
+}
+.environment .environment-grid header.main-header {
+  grid-area: header;
+  text-align: center;
+}
+.environment .environment-grid .buttons {
+  grid-area: buttons;
+}
+.environment .environment-grid .main-banner {
+  grid-area: banner;
+  width: 50%;
+  margin: auto;
+}
+
 @media (min-width: 640px) {
   .solutions .carousel-box {
     margin-right: -150px;
@@ -548,6 +570,18 @@ nav.navbar-light .navbar-nav .nav-link {
   }
   .visions .pale-bg .ellipse.four {
     transform: scale(0.75) translate(25%, -90%);
+  }
+
+  .environment {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .environment .environment-grid {
+    grid-template-areas: "header header header" "banner banner ." "banner banner buttons" "banner banner .";
+    column-gap: 16px;
+  }
+  .environment .environment-grid .main-banner {
+    width: 75%;
   }
 }
 @media (min-width: 992px) {

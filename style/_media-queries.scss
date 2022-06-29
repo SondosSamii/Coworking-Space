@@ -48,6 +48,39 @@
             }
         }
     }
+
+    .environment {
+        padding-top: $gutter;
+        padding-bottom: $gutter;
+
+        .environment-grid {
+            grid-template-areas:
+                "header header header"
+                "banner banner ."
+                "banner banner buttons"
+                "banner banner .";
+            column-gap: calc($gutter / 2);
+
+            header.main-header {
+
+                // grid-area: header;
+            }
+
+            .buttons {
+
+                // grid-area: buttons;
+                button {
+                    // display: block;
+                }
+            }
+
+            .main-banner {
+                // grid-area: banner;
+                width: 75%;
+                // margin-left: auto;
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {

@@ -406,4 +406,33 @@ nav {
     }
 }
 
+.environment {
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
+
+    .environment-grid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "banner"
+            "buttons";
+        row-gap: calc($gutter / 2);
+
+        header.main-header {
+            grid-area: header;
+            text-align: center;
+        }
+
+        .buttons {
+            grid-area: buttons;
+        }
+
+        .main-banner {
+            grid-area: banner;
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
 @import "media-queries";
