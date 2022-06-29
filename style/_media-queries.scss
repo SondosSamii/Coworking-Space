@@ -166,7 +166,7 @@
     }
 
     .gallery {
-        .gallery-content {
+        .gallery-grid {
             grid-template-areas:
                 "header header header header"
                 "square-1 rect-1 rect-1 banner"
@@ -180,7 +180,7 @@
 
 @media (min-width: 1200px) {
     .gallery {
-        .gallery-content {
+        .gallery-grid {
             grid-template-areas:
                 "header header header banner"
                 "square-1 rect-1 rect-1 banner"

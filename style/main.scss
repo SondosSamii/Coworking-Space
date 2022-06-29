@@ -335,8 +335,11 @@ nav {
 }
 
 .benefits {
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
+
     .benefit {
-        margin-bottom: calc($gutter / 2);
+        margin-top: calc($gutter / 2);
 
         header.sub-header {
             margin-top: $gutter;
@@ -355,10 +358,10 @@ nav {
 }
 
 .gallery {
-    padding-top: $gutter;
-    padding-bottom: $gutter;
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
 
-    .gallery-content {
+    .gallery-grid {
         display: grid;
         grid-template-areas:
             "header header header"
@@ -371,7 +374,6 @@ nav {
 
         header.main-header {
             grid-area: header;
-            padding: 0;
             text-align: center;
         }
 
