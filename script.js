@@ -13,6 +13,7 @@ $(".owl-carousel").owlCarousel({
     },
     992: {
       items: 1.35,
+      margin: 20,
     },
   },
 });
