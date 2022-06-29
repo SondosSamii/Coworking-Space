@@ -82,8 +82,8 @@
 
 header.main-header {
   text-align: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 header.main-header h2 {
   font-family: "Gilroy SemiBold";
@@ -473,6 +473,44 @@ nav.navbar-light .navbar-nav .nav-link {
   line-height: 1.99;
 }
 
+.gallery {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.gallery .gallery-content {
+  display: grid;
+  grid-template-areas: "header header header" "square-1 rect-1 rect-1" "rect-2 rect-2 square-2" "banner banner banner";
+  grid-template-rows: repeat(3, auto) minmax(auto, 230px);
+  row-gap: 10.6666666667px;
+  column-gap: 10.6666666667px;
+}
+.gallery .gallery-content header.main-header {
+  grid-area: header;
+  padding: 0;
+  text-align: center;
+}
+.gallery .gallery-content .square-1 {
+  grid-area: square-1;
+}
+.gallery .gallery-content .rectangle-1 {
+  grid-area: rect-1;
+}
+.gallery .gallery-content .square-2 {
+  grid-area: square-2;
+}
+.gallery .gallery-content .rectangle-2 {
+  grid-area: rect-2;
+}
+.gallery .gallery-content .main-space {
+  grid-area: banner;
+}
+.gallery .gallery-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media (min-width: 640px) {
   .solutions .carousel-box {
     margin-right: -150px;
@@ -557,6 +595,8 @@ nav.navbar-light .navbar-nav .nav-link {
 
   header.main-header {
     text-align: start;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .visions .pale-bg .ellipse.one {
@@ -590,6 +630,23 @@ nav.navbar-light .navbar-nav .nav-link {
   .solutions .carousel-box .item {
     max-width: 532.8px;
     height: 710.4px;
+  }
+
+  .gallery .gallery-content {
+    grid-template-areas: "header header header header" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
+    grid-template-rows: repeat(3, auto);
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery .gallery-content {
+    grid-template-areas: "header header header banner" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+  .gallery .gallery-content header.main-header {
+    text-align: start;
   }
 }
 @media (min-width: 1366px) {

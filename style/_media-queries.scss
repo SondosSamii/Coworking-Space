@@ -117,6 +117,8 @@
 
     header.main-header {
         text-align: start;
+        padding-top: $gutter;
+        padding-bottom: $gutter;
     }
 
     .visions {
@@ -161,6 +163,35 @@
             .item {
                 max-width: 532.8px;
                 height: 710.4px;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery-content {
+            grid-template-areas:
+                "header header header header"
+                "square-1 rect-1 rect-1 banner"
+                "rect-2 rect-2 square-2 banner";
+            grid-template-rows: repeat(3, auto);
+            row-gap: calc($gutter / 2);
+            column-gap: calc($gutter / 2);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery {
+        .gallery-content {
+            grid-template-areas:
+                "header header header banner"
+                "square-1 rect-1 rect-1 banner"
+                "rect-2 rect-2 square-2 banner";
+            row-gap: $gutter;
+            column-gap: $gutter;
+
+            header.main-header {
+                text-align: start;
             }
         }
     }

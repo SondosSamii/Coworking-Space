@@ -352,4 +352,54 @@ nav {
     }
 }
 
+.gallery {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    .gallery-content {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "square-1 rect-1 rect-1"
+            "rect-2 rect-2 square-2"
+            "banner banner banner";
+        grid-template-rows: repeat(3, auto) minmax(auto, 230px);
+        row-gap: calc($gutter / 3);
+        column-gap: calc($gutter / 3);
+
+        header.main-header {
+            grid-area: header;
+            padding: 0;
+            text-align: center;
+        }
+
+        .square-1 {
+            grid-area: square-1;
+        }
+
+        .rectangle-1 {
+            grid-area: rect-1;
+        }
+
+        .square-2 {
+            grid-area: square-2;
+        }
+
+        .rectangle-2 {
+            grid-area: rect-2;
+        }
+
+        .main-space {
+            grid-area: banner;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
 @import "media-queries";
