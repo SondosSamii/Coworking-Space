@@ -119,6 +119,9 @@ button {
   font-size: 16.7px;
   transition: all 0.3s ease-in-out;
 }
+button:focus-visible {
+  outline: none;
+}
 button.main-btn {
   color: #fff;
   background-color: #fd5b2f;
@@ -130,7 +133,6 @@ button.main-btn {
 button.main-btn:hover, button.main-btn:focus {
   color: #fd5b2f;
   background-color: transparent;
-  box-shadow: none;
 }
 button.secondary-btn {
   color: #fd5b2f;
@@ -139,7 +141,6 @@ button.secondary-btn {
 }
 button.secondary-btn:hover, button.secondary-btn:focus {
   color: #fd5b2f;
-  box-shadow: none;
 }
 
 html {
@@ -542,19 +543,19 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .updates .updates-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 32px;
+  grid-template-columns: 1fr;
+  justify-items: center;
   row-gap: 24px;
 }
-.updates .updates-grid .item {
+.updates .updates-grid .update {
   width: fit-content;
   background-color: #fffafa;
   display: grid;
-  grid-template-areas: "pic content ";
-  grid-template-columns: 191px minmax(auto, 317px);
+  grid-template-areas: "pic" "content";
+  justify-items: center;
   margin-top: 48px;
 }
-.updates .updates-grid .item .update-bg {
+.updates .updates-grid .update .update-bg {
   width: 191px;
   height: 191px;
   grid-area: pic;
@@ -562,46 +563,49 @@ nav.navbar-light .navbar-nav .nav-link {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transform: translate(-20px, -30px);
+  transform: translateY(-20px);
   position: relative;
 }
-.updates .updates-grid .item .update-bg::after {
+.updates .updates-grid .update .update-bg::after {
   content: url(../images/updates/Path-1.svg);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.updates .updates-grid .item .content {
+.updates .updates-grid .update .content {
   grid-area: content;
-  padding: 24px 6px 24px 0;
+  padding: 16px;
 }
-.updates .updates-grid .item .content header.sub-header h4 {
+.updates .updates-grid .update .content header.sub-header h4 {
   font-family: "Gilroy SemiBold";
   font-size: 14px;
   letter-spacing: 0.74px;
   color: #fd5b2f;
   text-transform: uppercase;
 }
-.updates .updates-grid .item .content header.sub-header h5 {
+.updates .updates-grid .update .content header.sub-header h5 {
   font-family: "Gilroy SemiBold";
   font-size: 18.8px;
   letter-spacing: 1px;
   color: #000;
   text-transform: capitalize;
 }
-.updates .updates-grid .item .content header.sub-header p {
+.updates .updates-grid .update .content header.sub-header p {
   font-family: "Avenir Roman";
   font-size: 16px;
   line-height: 1.75;
   color: #7a7878;
+  transition: all 0.3s ease-in-out;
+}
+.updates .updates-grid .update .content header.sub-header p.hide-overflow {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.updates .updates-grid .item .content .secondary-btn {
+.updates .updates-grid .update .content .secondary-btn {
   height: fit-content;
   font-family: "Gilroy SemiBold";
   font-size: 16px;
@@ -660,6 +664,17 @@ nav.navbar-light .navbar-nav .nav-link {
   }
   .environment .environment-grid .main-banner {
     width: 75%;
+  }
+
+  .updates .updates-grid .update {
+    grid-template-areas: "pic content ";
+    grid-template-columns: 191px minmax(auto, 317px);
+  }
+  .updates .updates-grid .update .update-bg {
+    transform: translate(-20px, -30px);
+  }
+  .updates .updates-grid .update .content {
+    padding: 24px 6px 24px 0;
   }
 }
 @media (min-width: 992px) {
@@ -763,6 +778,11 @@ nav.navbar-light .navbar-nav .nav-link {
   }
   .environment .environment-grid .main-banner {
     width: 100%;
+  }
+
+  .updates .updates-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
   }
 }
 @media (min-width: 1200px) {

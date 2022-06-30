@@ -66,6 +66,23 @@
             }
         }
     }
+
+    .updates {
+        .updates-grid {
+            .update {
+                grid-template-areas: "pic content ";
+                grid-template-columns: 191px minmax(auto, 317px);
+
+                .update-bg {
+                    transform: translate(-20px, -30px);
+                }
+
+                .content {
+                    padding: 24px 6px 24px 0;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -213,6 +230,13 @@
             .main-banner {
                 width: 100%;
             }
+        }
+    }
+
+    .updates {
+        .updates-grid {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: $gutter;
         }
     }
 }

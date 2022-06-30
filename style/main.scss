@@ -441,16 +441,18 @@ nav {
 
     .updates-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: $gutter;
+        grid-template-columns: 1fr;
+        justify-items: center;
         row-gap: 24px;
 
-        .item {
+        .update {
             width: fit-content;
             background-color: #fffafa;
             display: grid;
-            grid-template-areas: "pic content ";
-            grid-template-columns: 191px minmax(auto, 317px);
+            grid-template-areas:
+                "pic"
+                "content";
+            justify-items: center;
             margin-top: 48px;
 
             .update-bg {
@@ -461,7 +463,7 @@ nav {
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
-                transform: translate(-20px, -30px);
+                transform: translateY(-20px);
                 position: relative;
 
                 &::after {
@@ -475,7 +477,7 @@ nav {
 
             .content {
                 grid-area: content;
-                padding: 24px 6px 24px 0;
+                padding: calc($gutter / 2);
 
                 header.sub-header {
                     h4 {
@@ -499,11 +501,15 @@ nav {
                         font-size: 16px;
                         line-height: 1.75;
                         color: #7a7878;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
+                        transition: all 0.3s ease-in-out;
+
+                        &.hide-overflow {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
                     }
                 }
 
