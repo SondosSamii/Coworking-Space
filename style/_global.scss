@@ -1,10 +1,22 @@
-@mixin blurBgLayer ($top, $height) {
+.bg-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+@mixin blurBgLayer ($top, $size, $bgColor) {
     position: absolute;
     top: $top;
-    width: 100%;
-    height: $height;
-    filter: blur(400px);
-    z-index: -1;
+    width: $size;
+    height: $size;
+    filter: blur(50px);
+    background-color: $bgColor;
+    border-radius: 50%;
+    opacity: 0.1;
 }
 
 @mixin mainBanner ($width, $height) {
@@ -26,16 +38,6 @@
     border-radius: 50%;
     z-index: -1;
     background-color: $bgColor;
-}
-
-.bg-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    overflow: hidden;
 }
 
 .imgs-box {

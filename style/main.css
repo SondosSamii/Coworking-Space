@@ -169,23 +169,27 @@ body {
 }
 body .lightblue-bg {
   position: absolute;
-  top: -50vh;
-  width: 100%;
-  height: 100vh;
-  filter: blur(400px);
-  z-index: -1;
-  right: -50%;
+  top: 0;
+  width: 944px;
+  height: 944px;
+  filter: blur(50px);
   background-color: #47caf3;
+  border-radius: 50%;
+  opacity: 0.1;
+  right: 0;
+  transform: translate(25%, -11%);
 }
 body .yellow-bg {
   position: absolute;
-  top: -50vh;
-  width: 100%;
-  height: 100vh;
-  filter: blur(400px);
-  z-index: -1;
-  left: -50%;
+  top: 0;
+  width: 1172px;
+  height: 1172px;
+  filter: blur(50px);
   background-color: #ffdb80;
+  border-radius: 50%;
+  opacity: 0.1;
+  left: 0;
+  transform: translate(-40%, -35%);
 }
 
 nav.navbar {
@@ -352,14 +356,29 @@ nav.navbar-light .navbar-nav .nav-link {
   background-image: url(../images/services/circles-bg.svg);
   background-repeat: no-repeat;
 }
-.services .yellow-bg {
+.services .yellow-bg.left {
   position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 10vh;
-  filter: blur(400px);
-  z-index: -1;
+  top: 50%;
+  width: 516px;
+  height: 516px;
+  filter: blur(50px);
   background-color: #ffdb80;
+  border-radius: 50%;
+  opacity: 0.1;
+  left: 0;
+  transform: translate(-25%, -50%);
+}
+.services .yellow-bg.right {
+  position: absolute;
+  top: 50%;
+  width: 726px;
+  height: 726px;
+  filter: blur(50px);
+  background-color: #ffdb80;
+  border-radius: 50%;
+  opacity: 0.1;
+  left: 50%;
+  transform: translate(35%, -50%);
 }
 
 .visions {

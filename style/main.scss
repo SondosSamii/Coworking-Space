@@ -14,15 +14,15 @@ body {
     overflow-x: hidden;
 
     .lightblue-bg {
-        @include blurBgLayer(-50vh, 100vh);
-        right: -50%;
-        background-color: $main-lightblue;
+        @include blurBgLayer(0, 944px, $main-lightblue);
+        right: 0;
+        transform: translate(25%, -11%);
     }
 
     .yellow-bg {
-        @include blurBgLayer(-50vh, 100vh);
-        left: -50%;
-        background-color: $main-yellow;
+        @include blurBgLayer(0, 1172px, $main-yellow);
+        left: 0;
+        transform: translate(-40%, -35%);
     }
 }
 
@@ -226,8 +226,18 @@ nav {
     }
 
     .yellow-bg {
-        @include blurBgLayer(100%, 10vh);
-        background-color: $main-yellow;
+
+        &.left {
+            @include blurBgLayer(50%, 516px, $main-yellow);
+            left: 0;
+            transform: translate(-25%, -50%);
+        }
+
+        &.right {
+            @include blurBgLayer(50%, 726px, $main-yellow);
+            left: 50%;
+            transform: translate(35%, -50%);
+        }
     }
 }
 
