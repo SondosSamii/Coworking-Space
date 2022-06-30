@@ -868,7 +868,7 @@ footer .bg-layer {
   }
   .solutions .carousel-box .item {
     max-width: 532.8px;
-    height: 710.4px;
+    height: calc(100vh - 32px);
   }
 
   .gallery .gallery-grid {
