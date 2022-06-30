@@ -50,6 +50,19 @@
     box-shadow: $ellipse-shadow;
 }
 
+%centerItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%resetList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
 header.main-header {
     text-align: center;
 

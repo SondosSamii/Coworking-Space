@@ -80,6 +80,19 @@
   box-shadow: 0 56.4px 175.5px 0 rgba(255, 200, 118, 0.35);
 }
 
+footer .footer-grid .social-media ul a, .updates .updates-grid .update .update-bg::after, .home .people span.people-num::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .footer-grid ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 header.main-header {
   text-align: center;
 }
@@ -276,10 +289,6 @@ nav.navbar-light .navbar-nav .nav-link {
   color: #fff;
   font-size: 10.4px;
   font-weight: 900;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .home .people span.visits {
   display: block;
@@ -568,10 +577,6 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .updates .updates-grid .update .update-bg::after {
   content: url(../images/updates/Path-1.svg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .updates .updates-grid .update .content {
   grid-area: content;
@@ -616,6 +621,77 @@ nav.navbar-light .navbar-nav .nav-link {
   padding-right: 2rem;
   padding-left: 2rem;
   margin: 3rem auto;
+}
+
+footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
+footer .footer-grid {
+  display: grid;
+  grid-template-areas: "brand brand" "company partnership" "social social";
+  column-gap: 10.6666666667px;
+  row-gap: 10.6666666667px;
+  justify-items: center;
+  text-align: center;
+}
+footer .footer-grid .brand {
+  grid-area: brand;
+}
+footer .footer-grid .brand a {
+  font-family: "Cera Pro Medium";
+  font-size: 29.3px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+footer .footer-grid .brand p {
+  font-family: "Gilroy Regular";
+  font-size: 16.7px;
+  line-height: 1.85;
+  color: #000;
+}
+footer .footer-grid .company {
+  grid-area: company;
+}
+footer .footer-grid .partnership {
+  grid-area: partnership;
+}
+footer .footer-grid .social-media {
+  grid-area: social;
+}
+footer .footer-grid .social-media ul li {
+  width: 41.8px;
+  height: 41.8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 7px;
+  display: inline-block;
+  position: relative;
+}
+footer .footer-grid .social-media ul a {
+  color: #fd5b2f;
+}
+footer .footer-grid h2 {
+  font-family: "Gilroy SemiBold";
+  font-size: 20.9px;
+  color: #fd5b2f;
+  margin-bottom: 10px;
+}
+footer .footer-grid ul:not(.social-media ul) li {
+  margin-bottom: 10px;
+}
+footer .footer-grid ul:not(.social-media ul) li a {
+  font-family: "Gilroy Regular";
+  font-size: 15.7px;
+  color: #000;
+  text-decoration: none;
+}
+footer .bg-layer {
+  opacity: 0.1;
+  background-image: linear-gradient(to bottom, rgba(253, 91, 47, 0), #fd5b2f);
 }
 
 @media (min-width: 640px) {
@@ -675,6 +751,20 @@ nav.navbar-light .navbar-nav .nav-link {
   }
   .updates .updates-grid .update .content {
     padding: 24px 6px 24px 0;
+  }
+
+  footer .footer-grid {
+    grid-template-areas: "brand company partnership" "social company partnership";
+    column-gap: 16px;
+    row-gap: 16px;
+    justify-items: start;
+    text-align: start;
+  }
+  footer .footer-grid ul:not(.social-media ul) li {
+    margin-bottom: 20px;
+  }
+  footer .footer-grid ul:not(.social-media ul) li a {
+    font-size: 16.7px;
   }
 }
 @media (min-width: 992px) {
@@ -783,6 +873,16 @@ nav.navbar-light .navbar-nav .nav-link {
   .updates .updates-grid {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
+  }
+
+  footer .footer-grid {
+    grid-template-areas: "brand company partnership social";
+    column-gap: 64px;
+    grid-template-columns: minmax(auto, 300px) repeat(2, auto) minmax(210px, auto);
+  }
+  footer .footer-grid .brand a,
+footer .footer-grid h2 {
+    margin-bottom: 24px;
   }
 }
 @media (min-width: 1200px) {

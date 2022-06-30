@@ -83,6 +83,28 @@
             }
         }
     }
+
+    footer {
+        .footer-grid {
+            grid-template-areas:
+                "brand company partnership"
+                "social company partnership";
+            column-gap: calc($gutter / 2);
+            row-gap: calc($gutter / 2);
+            justify-items: start;
+            text-align: start;
+
+            ul:not(.social-media ul) {
+                li {
+                    margin-bottom: 20px;
+
+                    a {
+                        font-size: 16.7px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -237,6 +259,20 @@
         .updates-grid {
             grid-template-columns: repeat(2, 1fr);
             column-gap: $gutter;
+        }
+    }
+
+    footer {
+        .footer-grid {
+            grid-template-areas:
+                "brand company partnership social";
+            column-gap: calc($gutter * 2);
+            grid-template-columns: minmax(auto, 300px) repeat(2, auto) minmax(210px, auto);
+
+            .brand a,
+            h2 {
+                margin-bottom: 24px;
+            }
         }
     }
 }
