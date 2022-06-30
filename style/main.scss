@@ -12,6 +12,7 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     .lightblue-bg {
         @include blurBgLayer(0, 944px, $main-lightblue);
@@ -23,6 +24,58 @@ body {
         @include blurBgLayer(0, 1172px, $main-yellow);
         left: 0;
         transform: translate(-40%, -35%);
+    }
+
+    .loader {
+        height: 100vh;
+        background-color: #fff;
+        z-index: 9;
+        display: none;
+
+        &.visible {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            width: 12px;
+            height: 12px;
+            background-color: $main-color;
+            border-radius: 50%;
+            display: inline-block;
+            animation: 0.5s ease-in-out 0s infinite alternate both snaking;
+
+            &:nth-of-type(2) {
+                animation-delay: 0.1s;
+            }
+
+            &:nth-of-type(3) {
+                animation-delay: 0.2s;
+            }
+
+            &:nth-of-type(4) {
+                animation-delay: 0.3s;
+            }
+
+            &:nth-of-type(5) {
+                animation-delay: 0.4s;
+            }
+        }
+    }
+
+    @keyframes snaking {
+
+        0%,
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        50% {
+            opacity: 0.3;
+            transform: translateY(5px);
+        }
     }
 }
 
@@ -535,6 +588,12 @@ nav {
         padding-right: 2rem;
         padding-left: 2rem;
         margin: 3rem auto;
+    }
+
+    .loader {
+        width: fit-content;
+        height: auto;
+        margin: 3rem auto 0;
     }
 }
 

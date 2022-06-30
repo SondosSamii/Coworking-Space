@@ -1,5 +1,10 @@
-window.onload = function () {
-  console.log("Loaded");
+function toggleLoader(loaderId) {
+  document.getElementById(loaderId).classList.toggle("visible");
+  document.body.style.overflowY = "visible";
+}
+
+window.onload = () => {
+  toggleLoader("loader");
 };
 
 $(".owl-carousel").owlCarousel({
@@ -31,20 +36,21 @@ function toggleParagraph(e) {
   par.classList.toggle("hide-overflow");
 }
 
-const loadMore = document.getElementById("load-more");
 let maxUpdates = 4;
 
-function moreUpdates() {
-  const hiddenUpdates = document.querySelectorAll(
-    ".updates-grid .update.hidden"
-  );
-  if (hiddenUpdates.length < maxUpdates) {
-    maxUpdates = hiddenUpdates.length;
-    loadMore.style.display = "none";
-  }
-  for (let i = 0; i < maxUpdates; i++) {
-    hiddenUpdates[i].classList.remove("hidden");
-  }
+function moreUpdates(e) {
+  toggleLoader("more-loader");
+  setTimeout(() => {
+    toggleLoader("more-loader");
+    const hiddenUpdates = document.querySelectorAll(
+      ".updates-grid .update.hidden"
+    );
+    if (hiddenUpdates.length < maxUpdates) {
+      maxUpdates = hiddenUpdates.length;
+      e.target.style.display = "none";
+    }
+    for (let i = 0; i < maxUpdates; i++) {
+      hiddenUpdates[i].classList.remove("hidden");
+    }
+  }, 3000);
 }
-
-loadMore.addEventListener("click", moreUpdates);

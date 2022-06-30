@@ -564,7 +564,14 @@
                     </div>
                 </div>
             </div>
-            <button class="main-btn" id="load-more">Load More</button>
+            <div class="loader" id="more-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="main-btn" onclick="moreUpdates(event)">Load More</button>
         </div>
     </section>
 
@@ -607,6 +614,14 @@
         </div>
         <div class="bg-layer"></div>
     </footer>
+
+    <div class="bg-layer loader visible" id="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
