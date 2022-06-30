@@ -435,4 +435,94 @@ nav {
     }
 }
 
+.updates {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    .updates-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: $gutter;
+        row-gap: 24px;
+
+        .item {
+            width: fit-content;
+            background-color: #fffafa;
+            display: grid;
+            grid-template-areas: "pic content ";
+            grid-template-columns: 191px minmax(auto, 317px);
+            margin-top: 48px;
+
+            .update-bg {
+                width: 191px;
+                height: 191px;
+                grid-area: pic;
+                background-image: url(../images/updates/update.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transform: translate(-20px, -30px);
+                position: relative;
+
+                &::after {
+                    content: url(../images/updates/Path-1.svg);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .content {
+                grid-area: content;
+                padding: 24px 6px 24px 0;
+
+                header.sub-header {
+                    h4 {
+                        font-family: 'Gilroy SemiBold';
+                        font-size: 14px;
+                        letter-spacing: 0.74px;
+                        color: $main-color;
+                        text-transform: uppercase;
+                    }
+
+                    h5 {
+                        font-family: 'Gilroy SemiBold';
+                        font-size: 18.8px;
+                        letter-spacing: 1px;
+                        color: #000;
+                        text-transform: capitalize;
+                    }
+
+                    p {
+                        font-family: 'Avenir Roman';
+                        font-size: 16px;
+                        line-height: 1.75;
+                        color: #7a7878;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+
+                .secondary-btn {
+                    height: fit-content;
+                    font-family: 'Gilroy SemiBold';
+                    font-size: 16px;
+                    letter-spacing: 0.85px;
+                }
+            }
+        }
+    }
+
+    .main-btn {
+        display: block;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        margin: 3rem auto;
+    }
+}
+
 @import "media-queries";

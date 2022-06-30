@@ -536,6 +536,84 @@ nav.navbar-light .navbar-nav .nav-link {
   margin: auto;
 }
 
+.updates {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.updates .updates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 24px;
+}
+.updates .updates-grid .item {
+  width: fit-content;
+  background-color: #fffafa;
+  display: grid;
+  grid-template-areas: "pic content ";
+  grid-template-columns: 191px minmax(auto, 317px);
+  margin-top: 48px;
+}
+.updates .updates-grid .item .update-bg {
+  width: 191px;
+  height: 191px;
+  grid-area: pic;
+  background-image: url(../images/updates/update.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(-20px, -30px);
+  position: relative;
+}
+.updates .updates-grid .item .update-bg::after {
+  content: url(../images/updates/Path-1.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.updates .updates-grid .item .content {
+  grid-area: content;
+  padding: 24px 6px 24px 0;
+}
+.updates .updates-grid .item .content header.sub-header h4 {
+  font-family: "Gilroy SemiBold";
+  font-size: 14px;
+  letter-spacing: 0.74px;
+  color: #fd5b2f;
+  text-transform: uppercase;
+}
+.updates .updates-grid .item .content header.sub-header h5 {
+  font-family: "Gilroy SemiBold";
+  font-size: 18.8px;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: capitalize;
+}
+.updates .updates-grid .item .content header.sub-header p {
+  font-family: "Avenir Roman";
+  font-size: 16px;
+  line-height: 1.75;
+  color: #7a7878;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.updates .updates-grid .item .content .secondary-btn {
+  height: fit-content;
+  font-family: "Gilroy SemiBold";
+  font-size: 16px;
+  letter-spacing: 0.85px;
+}
+.updates .main-btn {
+  display: block;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin: 3rem auto;
+}
+
 @media (min-width: 640px) {
   .solutions .carousel-box {
     margin-right: -150px;
