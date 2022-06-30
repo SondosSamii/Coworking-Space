@@ -30,3 +30,21 @@ function toggleParagraph(e) {
     : (e.target.innerHTML = `Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>`);
   par.classList.toggle("hide-overflow");
 }
+
+const loadMore = document.getElementById("load-more");
+let maxUpdates = 4;
+
+function moreUpdates() {
+  const hiddenUpdates = document.querySelectorAll(
+    ".updates-grid .update.hidden"
+  );
+  if (hiddenUpdates.length < maxUpdates) {
+    maxUpdates = hiddenUpdates.length;
+    loadMore.style.display = "none";
+  }
+  for (let i = 0; i < maxUpdates; i++) {
+    hiddenUpdates[i].classList.remove("hidden");
+  }
+}
+
+loadMore.addEventListener("click", moreUpdates);

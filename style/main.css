@@ -581,6 +581,9 @@ nav.navbar-light .navbar-nav .nav-link {
   justify-items: center;
   margin-top: 48px;
 }
+.updates .updates-grid .update.hidden {
+  display: none;
+}
 .updates .updates-grid .update .update-bg {
   width: 191px;
   height: 191px;
