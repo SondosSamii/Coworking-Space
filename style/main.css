@@ -192,13 +192,9 @@ body .yellow-bg {
   transform: translate(-40%, -35%);
 }
 
-nav.navbar {
-  width: 100%;
-  z-index: 9;
-}
 nav.navbar-light .navbar-brand {
   position: absolute;
-  top: 0;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -223,8 +219,6 @@ nav.navbar-light .navbar-nav .nav-link {
 .home {
   display: grid;
   align-items: center;
-  overflow: hidden;
-  position: relative;
 }
 .home h1 {
   font-family: "Axiforma Bold";
@@ -303,6 +297,10 @@ nav.navbar-light .navbar-nav .nav-link {
   width: 110px;
   height: 24px;
   background-color: #686c75;
+}
+.home .bg-layer {
+  height: 150vh;
+  bottom: auto;
 }
 
 .services {
@@ -787,6 +785,10 @@ footer .bg-layer {
   }
 }
 @media (min-width: 992px) {
+  nav.navbar-light .navbar-brand {
+    top: auto;
+  }
+
   .home h1 {
     font-size: 54px;
     max-width: 474.3px;

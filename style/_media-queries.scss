@@ -108,6 +108,14 @@
 }
 
 @media (min-width: 992px) {
+    nav {
+        &.navbar-light {
+            .navbar-brand {
+                top: auto;
+            }
+        }
+    }
+
     .home {
         h1 {
             font-size: 54px;

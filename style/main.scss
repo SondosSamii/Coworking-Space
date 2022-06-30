@@ -27,15 +27,11 @@ body {
 }
 
 nav {
-    &.navbar {
-        width: 100%;
-        z-index: 9;
-    }
 
     &.navbar-light {
         .navbar-brand {
             position: absolute;
-            top: 0;
+            top: 14px;
             left: 50%;
             transform: translateX(-50%);
             margin: 0;
@@ -67,8 +63,6 @@ nav {
 .home {
     display: grid;
     align-items: center;
-    overflow: hidden;
-    position: relative;
 
     h1 {
         font-family: 'Axiforma Bold';
@@ -163,6 +157,11 @@ nav {
             height: 24px;
             background-color: $main-grey;
         }
+    }
+
+    .bg-layer {
+        height: 150vh;
+        bottom: auto;
     }
 }
 
