@@ -88,3 +88,12 @@ function getLocation(e) {
   document.getElementById("locationModalLabel").innerHTML = city.name;
   document.getElementById("locationFrame").setAttribute("src", city.location);
 }
+
+var myModalEl = document.getElementById("locationModal");
+myModalEl.addEventListener("show.bs.modal", function (event) {
+  window.scrollTo(0, 0);
+});
+
+myModalEl.addEventListener("hidden.bs.modal", function (event) {
+  document.body.style.overflowY = "visible";
+});
