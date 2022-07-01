@@ -5,6 +5,7 @@ function toggleLoader(loaderId) {
 
 window.onload = () => {
   toggleLoader("loader");
+  fetchCities();
 };
 
 $(".owl-carousel").owlCarousel({
@@ -56,4 +57,34 @@ function moreUpdates(e) {
       }
     }, 300);
   }, 3000);
+}
+
+let cities = [];
+
+function fetchCities() {
+  fetch("cities.json")
+    .then((res) => res.json())
+    .then((data) => {
+      cities = data;
+      makeCityOptions(cities);
+    })
+    .catch((err) => console.error(err));
+}
+
+function makeCityOptions(data) {
+  const citiesMenu = document.getElementById("cities");
+  data.forEach((city) => {
+    let option = document.createElement("option");
+    option.appendChild(document.createTextNode(city.name));
+    option.setAttribute("value", city.id);
+    citiesMenu.appendChild(option);
+  });
+}
+
+function getLocation(e) {
+  const city = cities.filter((city) => city.id == e.target.value)[0];
+  document.getElementById("location").classList.add("d-none");
+  document.getElementById("viewBtn").classList.remove("d-none");
+  document.getElementById("locationModalLabel").innerHTML = city.name;
+  document.getElementById("locationFrame").setAttribute("src", city.location);
 }

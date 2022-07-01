@@ -21,8 +21,9 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-lg">
             <a class="navbar-brand" href="#">1-Space</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
@@ -64,8 +65,22 @@
                         alt="Coworking Space" />
                     <span class="v-text">Co Working</span>
                 </div>
-                <div class="city-box">
-
+                <div class="row align-items-center text-center city-box">
+                    <div class="col-4">
+                        <div class="custom-select">
+                            <select name="cities" id="cities" onchange="getLocation(event)">
+                                <option disabled selected hidden>City</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <span id="location">Location</span>
+                        <button type="button" class="secondary-btn d-none" data-bs-toggle="modal"
+                            data-bs-target="#locationModal" id="viewBtn">View Location</button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="main-btn">Schedule Visit</button>
+                    </div>
                 </div>
                 <div class="people">
                     <img src="images/home/people/person-1.jpg" class="img-fluid" alt="Person 1">
@@ -93,6 +108,30 @@
                 </div>
                 <div class="col col-md-auto">
                     <img src="images/home/brands/shopify.svg" class="img-fluid" alt="Shopify">
+                </div>
+            </div>
+            <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="locationModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body mx-auto">
+                            <div class="map-outer">
+                                <div class="location-canvas">
+                                    <iframe width="300" height="300" id="locationFrame" frameborder="0" scrolling="no">
+                                    </iframe>
+                                    <a href="https://123movies-to.org"></a><br>
+                                    <a href="https://www.embedgooglemap.net">insert google map into wordpress</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary px-3" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,10 +165,10 @@
                     </header>
                     <div class="row justify-content-center justify-content-lg-start buttons">
                         <div class="col-auto">
-                            <button class="main-btn">View Availability</button>
+                            <button type="button" class="main-btn">View Availability</button>
                         </div>
                         <div class="col-auto">
-                            <button class="secondary-btn ms-lg-3">
+                            <button type="button" class="secondary-btn ms-lg-3">
                                 <i class="fa-solid fa-play" aria-hidden="true"></i>
                                 <span>3D Tour of Space</span>
                             </button>
@@ -179,7 +218,7 @@
                             </header>
                         </div>
                         <div class="col-12 text-center text-lg-start">
-                            <button class="main-btn">Explore More</button>
+                            <button type="button" class="main-btn">Explore More</button>
                         </div>
                     </div>
                 </div>
@@ -214,7 +253,7 @@
                     </header>
                     <div class="row">
                         <div class="col-12 text-center text-lg-start">
-                            <button class="main-btn">View Availability</button>
+                            <button type="button" class="main-btn">View Availability</button>
                         </div>
                     </div>
                 </div>
@@ -320,8 +359,8 @@
                         and parcel acceptance services.</p>
                 </header>
                 <div class="buttons text-center text-lg-start">
-                    <button class="main-btn">Sign Up Now</button>
-                    <button class="secondary-btn">Schedule Visit</button>
+                    <button type="button" class="main-btn">Sign Up Now</button>
+                    <button type="button" class="secondary-btn">Schedule Visit</button>
                 </div>
                 <div class="main-banner">
                     <img src="images/environment/environment.jpg" class="img-fluid" alt="Environment">
@@ -347,7 +386,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -363,7 +402,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -379,7 +418,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -395,7 +434,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -411,7 +450,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -427,7 +466,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -443,7 +482,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -459,7 +498,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -475,7 +514,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -491,7 +530,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -507,7 +546,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -523,7 +562,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -539,7 +578,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -555,7 +594,7 @@
                                 infrastructures, such as equipment, utilities, and receptionist and custodial services,
                                 and in some cases refreshments and parcel acceptance services.</p>
                         </header>
-                        <button class="secondary-btn" onclick="toggleParagraph(event)">
+                        <button type="button" class="secondary-btn" onclick="toggleParagraph(event)">
                             Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -568,7 +607,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <button class="main-btn" onclick="moreUpdates(event)">Load More</button>
+            <button type="button" class="main-btn" onclick="moreUpdates(event)">Load More</button>
         </div>
     </section>
 

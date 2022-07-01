@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Cairo",
+    "location": "https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 2,
+    "name": "Giza",
+    "location": "https://maps.google.com/maps?q=Giza&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 3,
+    "name": "Alex",
+    "location": "https://maps.google.com/maps?q=Alexanderia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 4,
+    "name": "Dubai",
+    "location": "https://maps.google.com/maps?q=dubai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 5,
+    "name": "Makkah",
+    "location": "https://maps.google.com/maps?q=Makkah&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 6,
+    "name": "Rome",
+    "location": "https://maps.google.com/maps?q=Rome&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 7,
+    "name": "Rio de Janeiro",
+    "location": "https://maps.google.com/maps?q=Rio%20de%20Janeiro&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 8,
+    "name": "Tokyo",
+    "location": "https://maps.google.com/maps?q=Tokyo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 9,
+    "name": "New York",
+    "location": "https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    "id": 10,
+    "name": "Venice",
+    "location": "https://maps.google.com/maps?q=Venice&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  }
+]

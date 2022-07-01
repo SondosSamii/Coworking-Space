@@ -135,22 +135,26 @@ button {
 button:focus-visible {
   outline: none;
 }
-button.main-btn {
+
+.main-btn {
   color: #fff;
   background-color: #fd5b2f;
   border: 1px solid #fd5b2f;
   border-radius: 5px;
+  text-decoration: none;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
-button.main-btn:hover {
+.main-btn:hover {
   color: #fd5b2f;
   background-color: transparent;
 }
-button.secondary-btn {
+
+.secondary-btn {
   color: #fd5b2f;
   background-color: transparent;
   border: none;
+  text-decoration: none;
 }
 
 html {
@@ -262,7 +266,7 @@ nav.navbar-light .navbar-nav .nav-link {
   display: grid;
   grid-template-areas: "h1" "imgs" "city" "people";
   row-gap: 28px;
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 .home .home-grid h1 {
   grid-area: h1;
@@ -325,12 +329,46 @@ nav.navbar-light .navbar-nav .nav-link {
   grid-area: city;
   width: 75%;
   height: 45px;
-  background-color: #fd5b2f;
+  background-color: rgba(243, 243, 243, 0.6);
   -webkit-backdrop-filter: blur(35.5px);
   backdrop-filter: blur(35.5px);
   border-radius: 5.2px;
   margin: auto;
   z-index: 3;
+  font-family: "Cera Pro Medium";
+  font-size: 18.8px;
+  color: #989898;
+}
+.home .home-grid .city-box .custom-select {
+  padding-left: 1rem;
+  position: relative;
+}
+.home .home-grid .city-box .custom-select::before {
+  content: "\f3c5";
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #989898;
+}
+.home .home-grid .city-box .custom-select select {
+  width: 100%;
+  font-family: "Cera Pro Medium";
+  font-size: 18.8px;
+  color: #989898;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  padding: 8px 0 8px 24px;
+}
+.home .home-grid .city-box .custom-select select:focus-visible {
+  outline: none;
+}
+.home .home-grid .city-box .main-btn {
+  height: fit-content;
+  padding: 0.3rem 0.5rem;
 }
 .home .home-grid .people {
   grid-area: people;
@@ -367,6 +405,18 @@ nav.navbar-light .navbar-nav .nav-link {
   width: 110px;
   height: 24px;
   background-color: #686c75;
+}
+.home .map-outer {
+  position: relative;
+  text-align: right;
+  height: 300px;
+  width: 300px;
+}
+.home .location-canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 300px;
+  width: 300px;
 }
 .home > .bg-layer {
   height: 150vh;
@@ -448,14 +498,14 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .visions {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 .visions .vision {
   display: flex;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 .visions .vision i {
   font-size: 1.25rem;
@@ -498,9 +548,9 @@ nav.navbar-light .navbar-nav .nav-link {
   padding-left: 10px;
 }
 .visions .main-btn {
-  margin-top: 32px;
-  padding-right: 32px;
-  padding-left: 32px;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 .visions .pale-bg {
   width: 100%;
@@ -554,18 +604,18 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .benefits {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .benefits .benefit {
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 .benefits .benefit header.sub-header {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 .benefits .benefit header.sub-header h4 {
   font-size: 20.9px;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 .benefits .benefit header.sub-header p {
   font-size: 12.5px;
@@ -573,15 +623,15 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .gallery {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .gallery .gallery-grid {
   display: grid;
   grid-template-areas: "header header header" "square-1 rect-1 rect-1" "rect-2 rect-2 square-2" "banner banner banner";
   grid-template-rows: repeat(3, auto) minmax(auto, 230px);
-  row-gap: 10.6666666667px;
-  column-gap: 10.6666666667px;
+  row-gap: 0.6666666667rem;
+  column-gap: 0.6666666667rem;
 }
 .gallery .gallery-grid header.main-header {
   grid-area: header;
@@ -610,13 +660,13 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .environment {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .environment .environment-grid {
   display: grid;
   grid-template-areas: "header" "banner" "buttons";
-  row-gap: 16px;
+  row-gap: 1rem;
 }
 .environment .environment-grid header.main-header {
   grid-area: header;
@@ -632,8 +682,8 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 .updates {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .updates .updates-grid {
   display: grid;
@@ -671,7 +721,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .updates .updates-grid .update .content {
   grid-area: content;
-  padding: 16px;
+  padding: 1rem;
 }
 .updates .updates-grid .update .content header.sub-header h4 {
   font-family: "Gilroy SemiBold";
@@ -720,15 +770,15 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 
 footer {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 footer .footer-grid {
   display: grid;
   grid-template-areas: "brand brand" "company partnership" "social social";
-  column-gap: 10.6666666667px;
-  row-gap: 10.6666666667px;
+  column-gap: 0.6666666667rem;
+  row-gap: 0.6666666667rem;
   justify-items: center;
   text-align: center;
 }
@@ -866,12 +916,12 @@ footer .bg-layer {
   }
 
   .environment {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .environment .environment-grid {
     grid-template-areas: "header header header" "banner banner ." "banner banner buttons" "banner banner .";
-    column-gap: 16px;
+    column-gap: 1rem;
   }
   .environment .environment-grid .main-banner {
     width: 75%;
@@ -890,8 +940,8 @@ footer .bg-layer {
 
   footer .footer-grid {
     grid-template-areas: "brand company partnership" "social company partnership";
-    column-gap: 16px;
-    row-gap: 16px;
+    column-gap: 1rem;
+    row-gap: 1rem;
     justify-items: start;
     text-align: start;
   }
@@ -994,15 +1044,15 @@ footer .bg-layer {
   .gallery .gallery-grid {
     grid-template-areas: "header header header header" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
     grid-template-rows: repeat(3, auto);
-    row-gap: 16px;
-    column-gap: 16px;
+    row-gap: 1rem;
+    column-gap: 1rem;
   }
 
   .environment .environment-grid {
     grid-template-areas: "header header header banner banner" "header header header banner banner" "header header header banner banner" "buttons buttons buttons banner banner";
     grid-template-columns: repeat(5, 1fr);
-    row-gap: 32px;
-    column-gap: 32px;
+    row-gap: 2rem;
+    column-gap: 2rem;
   }
   .environment .environment-grid header.main-header {
     text-align: start;
@@ -1013,12 +1063,12 @@ footer .bg-layer {
 
   .updates .updates-grid {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
+    column-gap: 2rem;
   }
 
   footer .footer-grid {
     grid-template-areas: "brand company partnership social";
-    column-gap: 64px;
+    column-gap: 4rem;
     grid-template-columns: minmax(auto, 300px) repeat(2, auto) minmax(210px, auto);
   }
   footer .footer-grid .brand a,
@@ -1028,7 +1078,7 @@ footer .footer-grid h2 {
 }
 @media (min-width: 1200px) {
   .home .home-grid {
-    column-gap: 32px;
+    column-gap: 2rem;
   }
   .home .home-grid .main-imgs-box {
     text-align: start;
@@ -1047,6 +1097,10 @@ footer .footer-grid h2 {
   .home .home-grid .city-box {
     height: 100px;
   }
+  .home .home-grid .city-box .main-btn {
+    height: 56px;
+    padding: 0.5rem 1.5rem;
+  }
   .home .home-grid h1 {
     font-size: 54px;
   }
@@ -1058,8 +1112,8 @@ footer .footer-grid h2 {
 
   .gallery .gallery-grid {
     grid-template-areas: "header header header banner" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
-    row-gap: 32px;
-    column-gap: 32px;
+    row-gap: 2rem;
+    column-gap: 2rem;
   }
   .gallery .gallery-grid header.main-header {
     text-align: start;

@@ -114,25 +114,27 @@ button {
     &:focus-visible {
         outline: none;
     }
+}
 
-    &.main-btn {
-        color: #fff;
-        background-color: $main-color;
-        border: 1px solid $main-color;
-        border-radius: 5px;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+.main-btn {
+    color: #fff;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 
-        &:hover {
-            color: $main-color;
-            background-color: transparent;
-
-        }
-    }
-
-    &.secondary-btn {
+    &:hover {
         color: $main-color;
         background-color: transparent;
-        border: none;
+
     }
+}
+
+.secondary-btn {
+    color: $main-color;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
 }

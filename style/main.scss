@@ -198,13 +198,51 @@ nav {
             grid-area: city;
             width: 75%;
             height: 45px;
-            // background-color: rgba(243, 243, 243, 0.6);
-            background-color: $main-color;
+            background-color: rgba(243, 243, 243, 0.6);
             -webkit-backdrop-filter: blur(35.5px);
             backdrop-filter: blur(35.5px);
             border-radius: 5.2px;
             margin: auto;
             z-index: 3;
+            font-family: 'Cera Pro Medium';
+            font-size: 18.8px;
+            color: $warm-grey;
+
+            .custom-select {
+                padding-left: 1rem;
+                position: relative;
+
+                &::before {
+                    content: "\f3c5";
+                    position: absolute;
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $warm-grey;
+                }
+
+                select {
+                    width: 100%;
+                    font-family: 'Cera Pro Medium';
+                    font-size: 18.8px;
+                    color: $warm-grey;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    appearance: none;
+                    padding: 8px 0 8px 24px;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            .main-btn {
+                height: fit-content;
+                padding: 0.3rem 0.5rem;
+            }
         }
 
         .people {
@@ -252,6 +290,20 @@ nav {
             height: 24px;
             background-color: $main-grey;
         }
+    }
+
+    .map-outer {
+        position: relative;
+        text-align: right;
+        height: 300px;
+        width: 300px;
+    }
+
+    .location-canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 300px;
+        width: 300px;
     }
 
     >.bg-layer {
