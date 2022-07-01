@@ -1095,7 +1095,7 @@ footer .bg-layer {
   }
 
   .solutions .solutions-grid {
-    grid-template-areas: ". carousel" "header carousel" "btn carousel" ". carousel";
+    grid-template-areas: ". carousel" "header carousel" ". carousel" "btn carousel" ". carousel";
     grid-template-columns: 55% 45%;
     column-gap: 1rem;
     justify-items: start;
