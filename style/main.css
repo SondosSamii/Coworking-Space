@@ -634,7 +634,6 @@ nav.navbar-light .navbar-nav .nav-link {
   display: grid;
   grid-template-areas: "header" "carousel" "btn";
   grid-template-columns: 100%;
-  justify-items: start;
 }
 .solutions .solutions-grid .main-header {
   grid-area: header;
@@ -1099,6 +1098,7 @@ footer .bg-layer {
     grid-template-areas: ". carousel" "header carousel" "btn carousel" ". carousel";
     grid-template-columns: 55% 45%;
     column-gap: 1rem;
+    justify-items: start;
   }
   .solutions .solutions-grid .main-btn {
     margin: unset;
@@ -1178,8 +1178,7 @@ footer .footer-grid h2 {
   }
 
   .solutions .solutions-grid {
-    grid-template-columns: 50% 40%;
-    column-gap: 10%;
+    grid-template-columns: 50% 50%;
   }
 
   .gallery .gallery-grid {

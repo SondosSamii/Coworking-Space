@@ -460,7 +460,6 @@ nav {
 
     .main-btn {
         grid-area: mainBtn;
-        // margin-top: $gutter;
         width: fit-content;
         padding-right: $gutter;
         padding-left: $gutter;
@@ -531,8 +530,6 @@ nav {
             "carousel"
             "btn";
         grid-template-columns: 100%;
-        // column-gap: 10%;
-        justify-items: start;
 
         .main-header {
             grid-area: header;
@@ -542,15 +539,10 @@ nav {
             grid-area: btn;
             width: fit-content;
             margin: auto;
-            // text-align: center;
         }
 
         .carousel-box {
             grid-area: carousel;
-            // overflow-x: hidden;
-            // margin-top: 20px;
-            // margin-bottom: 20px;
-            // margin-right: -50px;
 
             .item {
                 height: 500px;
