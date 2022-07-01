@@ -67,21 +67,34 @@
     }
 
     .visions {
-        .pale-bg .ellipse {
-            &.one {
-                transform: scale(0.75) translate(0%, -30%);
-            }
+        .visions-grid {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "content paleBg"
+                "mainBtn paleBg";
+            grid-template-columns: 50% 50%;
+            // column-gap: 7%;
+            row-gap: $gutter;
 
-            &.two {
-                transform: scale(0.75) translate(20%, 100%);
-            }
+            .pale-bg .ellipse {
+                &.one {
+                    transform: scale(0.75) translate(0%, -30%);
+                }
 
-            &.three {
-                transform: scale(0.75) translateY(40%);
-            }
+                &.two {
+                    top: 0;
+                    // transform: scale(0.75) translate(20%, 100%);
+                    transform: scale(0.75) translate(10%, 90%);
+                }
 
-            &.four {
-                transform: scale(0.75) translate(25%, -90%);
+                &.three {
+                    transform: scale(0.75) translateY(40%);
+                }
+
+                &.four {
+                    transform: scale(0.75) translate(25%, -90%);
+                }
             }
         }
     }
@@ -247,30 +260,43 @@
     }
 
     .visions {
-        .pale-bg {
-            .ellipse {
-                &.one {
-                    top: -15%;
-                    left: 23%;
-                    transform: translate(0);
-                }
+        .visions-grid {
+            grid-template-areas:
+                "header paleBg"
+                "content paleBg"
+                "mainBtn paleBg";
+            grid-template-columns: 50% 40%;
+            column-gap: 7%;
+            row-gap: $gutter;
 
-                &.two {
-                    top: 85%;
-                    left: 0.5%;
-                    transform: translate(0);
-                }
+            .pale-bg {
+                width: 100%;
+                margin-top: 62px;
 
-                &.three {
-                    top: 55%;
-                    left: 80%;
-                    transform: translate(0);
-                }
+                .ellipse {
+                    &.one {
+                        top: -15%;
+                        left: 23%;
+                        transform: translate(0);
+                    }
 
-                &.four {
-                    right: 0;
-                    bottom: 100%;
-                    transform: translate(0);
+                    &.two {
+                        top: 85%;
+                        left: 0.5%;
+                        transform: translate(0);
+                    }
+
+                    &.three {
+                        top: 55%;
+                        left: 80%;
+                        transform: translate(0);
+                    }
+
+                    &.four {
+                        right: 0;
+                        bottom: 100%;
+                        transform: translate(0);
+                    }
                 }
             }
         }

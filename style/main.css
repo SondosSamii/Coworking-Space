@@ -520,15 +520,26 @@ nav.navbar-light .navbar-nav .nav-link {
   margin-bottom: 2rem;
   position: relative;
 }
-.visions .vision {
+.visions .visions-grid {
+  display: grid;
+  grid-template-areas: "header" "paleBg" "content" "mainBtn";
+  row-gap: 2rem;
+}
+.visions .visions-grid header.main-header {
+  grid-area: header;
+}
+.visions .visions-grid .visions-content {
+  grid-area: content;
+}
+.visions .visions-grid .visions-content .vision {
   display: flex;
   padding-bottom: 1rem;
 }
-.visions .vision i {
+.visions .visions-grid .visions-content .vision i {
   font-size: 1.25rem;
   position: relative;
 }
-.visions .vision i.one::after {
+.visions .visions-grid .visions-content .vision i.one::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -539,7 +550,7 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #fcd25f;
 }
-.visions .vision i.two::after {
+.visions .visions-grid .visions-content .vision i.two::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -550,7 +561,7 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #13ded2;
 }
-.visions .vision i.three::after {
+.visions .visions-grid .visions-content .vision i.three::after {
   content: "";
   width: 15.7px;
   height: 15.7px;
@@ -561,33 +572,35 @@ nav.navbar-light .navbar-nav .nav-link {
   z-index: -1;
   background-color: #1ac8f9;
 }
-.visions header.sub-header {
+.visions .visions-grid .visions-content .vision header.sub-header {
   padding-left: 10px;
 }
 .visions .main-btn {
-  margin-top: 2rem;
+  grid-area: mainBtn;
+  width: fit-content;
   padding-right: 2rem;
   padding-left: 2rem;
+  margin: auto;
 }
 .visions .pale-bg {
-  width: 100%;
+  grid-area: paleBg;
+  width: 90%;
   max-width: 445.1px;
   height: 353.1px;
   border-top-left-radius: 146.3px;
   background-color: #fff3c8;
-  margin-top: 62px;
   position: relative;
-  margin: auto;
+  margin: 32px auto;
 }
 .visions .pale-bg .ellipse.one {
   transform: scale(0.65) translate(-25%, -45%);
 }
 .visions .pale-bg .ellipse.two {
-  bottom: 30%;
-  transform: scale(0.65) translateY(125%);
+  top: 40%;
+  transform: scale(0.65);
 }
 .visions .pale-bg .ellipse.three {
-  right: -25%;
+  right: -20%;
   transform: scale(0.65) translateY(50%);
 }
 .visions .pale-bg .ellipse.four {
@@ -902,16 +915,23 @@ footer .bg-layer {
     font-size: 18.8px;
   }
 
-  .visions .pale-bg .ellipse.one {
+  .visions .visions-grid {
+    display: grid;
+    grid-template-areas: "header header" "content paleBg" "mainBtn paleBg";
+    grid-template-columns: 50% 50%;
+    row-gap: 2rem;
+  }
+  .visions .visions-grid .pale-bg .ellipse.one {
     transform: scale(0.75) translate(0%, -30%);
   }
-  .visions .pale-bg .ellipse.two {
-    transform: scale(0.75) translate(20%, 100%);
+  .visions .visions-grid .pale-bg .ellipse.two {
+    top: 0;
+    transform: scale(0.75) translate(10%, 90%);
   }
-  .visions .pale-bg .ellipse.three {
+  .visions .visions-grid .pale-bg .ellipse.three {
     transform: scale(0.75) translateY(40%);
   }
-  .visions .pale-bg .ellipse.four {
+  .visions .visions-grid .pale-bg .ellipse.four {
     transform: scale(0.75) translate(25%, -90%);
   }
 
@@ -1018,22 +1038,32 @@ footer .bg-layer {
     text-align: start;
   }
 
-  .visions .pale-bg .ellipse.one {
+  .visions .visions-grid {
+    grid-template-areas: "header paleBg" "content paleBg" "mainBtn paleBg";
+    grid-template-columns: 50% 40%;
+    column-gap: 7%;
+    row-gap: 2rem;
+  }
+  .visions .visions-grid .pale-bg {
+    width: 100%;
+    margin-top: 62px;
+  }
+  .visions .visions-grid .pale-bg .ellipse.one {
     top: -15%;
     left: 23%;
     transform: translate(0);
   }
-  .visions .pale-bg .ellipse.two {
+  .visions .visions-grid .pale-bg .ellipse.two {
     top: 85%;
     left: 0.5%;
     transform: translate(0);
   }
-  .visions .pale-bg .ellipse.three {
+  .visions .visions-grid .pale-bg .ellipse.three {
     top: 55%;
     left: 80%;
     transform: translate(0);
   }
-  .visions .pale-bg .ellipse.four {
+  .visions .visions-grid .pale-bg .ellipse.four {
     right: 0;
     bottom: 100%;
     transform: translate(0);
