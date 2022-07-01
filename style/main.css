@@ -127,9 +127,9 @@ header.sub-header p {
 }
 
 button {
-  height: 56px;
+  height: 45px;
   font-family: "Gilroy Medium";
-  font-size: 16.7px;
+  font-size: 14px;
   transition: all 0.3s ease-in-out;
 }
 button:focus-visible {
@@ -426,40 +426,56 @@ nav.navbar-light .navbar-nav .nav-link {
 .services {
   position: relative;
   overflow-x: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.services .imgs-box .main {
+.services .services-grid {
+  display: grid;
+  grid-template-areas: "header" "banner" "buttons";
+  row-gap: 1rem;
+}
+.services .services-grid .imgs-box {
+  grid-area: banner;
+  width: 75%;
+}
+.services .services-grid .imgs-box .main {
   width: 100%;
   object-fit: cover;
   border-top-right-radius: 300px;
   border-top-left-radius: 300px;
 }
-.services .imgs-box .calendar {
+.services .services-grid .imgs-box .calendar {
   position: absolute;
+  width: 90px;
   right: -36px;
-  bottom: 36px;
+  bottom: 10px;
   box-shadow: 3.1px 6.3px 20.9px 0 rgba(0, 0, 0, 0.08);
 }
-.services .imgs-box .alarm {
+.services .services-grid .imgs-box .alarm {
   position: absolute;
-  right: 50px;
-  bottom: 114px;
+  width: 45px;
+  right: 30px;
+  bottom: 80px;
   border-radius: 50%;
   box-shadow: 3.1px 6.3px 20.9px 0 rgba(0, 0, 0, 0.08);
 }
-.services .buttons {
-  text-align: center;
+.services .services-grid header.main-header {
+  grid-area: header;
 }
-.services .buttons .secondary-btn i {
+.services .services-grid .buttons {
+  grid-area: buttons;
+}
+.services .services-grid .buttons .secondary-btn i {
   width: 36px;
   height: 36px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   border: 1px solid rgba(253, 91, 47, 0.5);
   border-radius: 50%;
   text-align: center;
   padding-top: 4px;
   margin-right: 15px;
 }
-.services .buttons .secondary-btn span {
+.services .services-grid .buttons .secondary-btn span {
   display: inline-block;
   transform: translateY(-4px);
 }
@@ -871,6 +887,11 @@ footer .bg-layer {
     line-height: 1.25;
   }
 
+  button {
+    height: 56px;
+    font-size: 16.7px;
+  }
+
   .home .home-grid {
     grid-template-areas: ". imgs" "h1 imgs" "city imgs" "people imgs";
     grid-template-columns: 45% 55%;
@@ -991,19 +1012,22 @@ footer .bg-layer {
     margin-left: 20px;
   }
 
-  .services .imgs-box .calendar {
+  .services .services-grid {
+    grid-template-areas: "banner ." "banner header" "banner ." "banner buttons" "banner .";
+    grid-template-columns: 40% 50%;
+    column-gap: 7%;
+  }
+  .services .services-grid .imgs-box {
+    width: 100%;
+  }
+  .services .services-grid .imgs-box .calendar {
     right: -68px;
     bottom: 36px;
   }
-  .services .imgs-box .alarm {
+  .services .services-grid .imgs-box .alarm {
     right: 18px;
     bottom: 114px;
   }
-  .services .buttons {
-    margin-bottom: 36px;
-    text-align: start;
-  }
-
   header.main-header {
     text-align: start;
   }

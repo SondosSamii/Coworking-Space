@@ -19,11 +19,8 @@
     opacity: 0.1;
 }
 
-// @mixin mainBanner ($width, $height) {
 @mixin mainBanner () {
     width: 100%;
-    // max-width: $width;
-    // max-height: $height;
     object-fit: cover;
     border-top-right-radius: 300px;
     border-top-left-radius: 300px;
@@ -106,9 +103,9 @@ header.sub-header {
 }
 
 button {
-    height: 56px;
+    height: 45px;
     font-family: 'Gilroy Medium';
-    font-size: 16.7px;
+    font-size: 14px;
     transition: all 0.3s ease-in-out;
 
     &:focus-visible {
