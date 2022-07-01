@@ -421,8 +421,6 @@ nav {
             "paleBg"
             "content"
             "mainBtn";
-        // grid-template-columns: 50% 50%;
-        // column-gap: 7%;
         row-gap: $gutter;
 
         header.main-header {
@@ -479,6 +477,17 @@ nav {
         position: relative;
         margin: 32px auto;
 
+        .small-circle {
+            width: 104.5px;
+            height: 104.5px;
+            position: absolute;
+            top: 92%;
+            left: 5%;
+            background-color: #f1ebff;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
         .ellipse {
             &.one {
                 transform: scale(0.65) translate(-25%, -45%);
@@ -506,6 +515,7 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        z-index: -2;
     }
 }
 

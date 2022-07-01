@@ -74,8 +74,6 @@
                 "content paleBg"
                 "mainBtn paleBg";
             grid-template-columns: 50% 50%;
-            // column-gap: 7%;
-            row-gap: $gutter;
 
             .pale-bg .ellipse {
                 &.one {
@@ -84,7 +82,6 @@
 
                 &.two {
                     top: 0;
-                    // transform: scale(0.75) translate(20%, 100%);
                     transform: scale(0.75) translate(10%, 90%);
                 }
 
@@ -267,7 +264,6 @@
                 "mainBtn paleBg";
             grid-template-columns: 50% 40%;
             column-gap: 7%;
-            row-gap: $gutter;
 
             .pale-bg {
                 width: 100%;

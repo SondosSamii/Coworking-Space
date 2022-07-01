@@ -592,6 +592,16 @@ nav.navbar-light .navbar-nav .nav-link {
   position: relative;
   margin: 32px auto;
 }
+.visions .pale-bg .small-circle {
+  width: 104.5px;
+  height: 104.5px;
+  position: absolute;
+  top: 92%;
+  left: 5%;
+  background-color: #f1ebff;
+  border-radius: 50%;
+  z-index: -1;
+}
 .visions .pale-bg .ellipse.one {
   transform: scale(0.65) translate(-25%, -45%);
 }
@@ -612,6 +622,7 @@ nav.navbar-light .navbar-nav .nav-link {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  z-index: -2;
 }
 
 .solutions {
@@ -919,7 +930,6 @@ footer .bg-layer {
     display: grid;
     grid-template-areas: "header header" "content paleBg" "mainBtn paleBg";
     grid-template-columns: 50% 50%;
-    row-gap: 2rem;
   }
   .visions .visions-grid .pale-bg .ellipse.one {
     transform: scale(0.75) translate(0%, -30%);
@@ -1042,7 +1052,6 @@ footer .bg-layer {
     grid-template-areas: "header paleBg" "content paleBg" "mainBtn paleBg";
     grid-template-columns: 50% 40%;
     column-gap: 7%;
-    row-gap: 2rem;
   }
   .visions .visions-grid .pale-bg {
     width: 100%;
