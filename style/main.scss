@@ -31,11 +31,14 @@ body {
         background-color: #fff;
         z-index: 9;
         display: none;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
 
         &.visible {
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 1;
         }
 
         span {
@@ -513,9 +516,12 @@ nav {
                 "content";
             justify-items: center;
             margin-top: 48px;
+            opacity: 1;
+            transition: all 5s ease-in-out;
 
             &.hidden {
                 display: none;
+                opacity: 0;
             }
 
             .update-bg {

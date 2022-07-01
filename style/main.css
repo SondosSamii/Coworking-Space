@@ -194,11 +194,14 @@ body .loader {
   background-color: #fff;
   z-index: 9;
   display: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 body .loader.visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
 }
 body .loader span {
   width: 12px;
@@ -619,9 +622,12 @@ nav.navbar-light .navbar-nav .nav-link {
   grid-template-areas: "pic" "content";
   justify-items: center;
   margin-top: 48px;
+  opacity: 1;
+  transition: all 5s ease-in-out;
 }
 .updates .updates-grid .update.hidden {
   display: none;
+  opacity: 0;
 }
 .updates .updates-grid .update .update-bg {
   width: 191px;

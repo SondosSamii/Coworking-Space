@@ -49,8 +49,11 @@ function moreUpdates(e) {
       maxUpdates = hiddenUpdates.length;
       e.target.style.display = "none";
     }
-    for (let i = 0; i < maxUpdates; i++) {
-      hiddenUpdates[i].classList.remove("hidden");
-    }
+    const fade = setInterval(() => {
+      for (let i = 0; i < maxUpdates; i++) {
+        hiddenUpdates[i].classList.remove("hidden");
+        clearInterval(fade);
+      }
+    }, 300);
   }, 3000);
 }
