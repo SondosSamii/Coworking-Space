@@ -196,8 +196,8 @@ nav {
 
         .city-box {
             grid-area: city;
-            width: 75%;
-            height: 45px;
+            width: 100%;
+            min-height: 45px;
             background-color: rgba(243, 243, 243, 0.6);
             -webkit-backdrop-filter: blur(35.5px);
             backdrop-filter: blur(35.5px);
@@ -205,7 +205,7 @@ nav {
             margin: auto;
             z-index: 3;
             font-family: 'Cera Pro Medium';
-            font-size: 18.8px;
+            font-size: 15px;
             color: $warm-grey;
 
             .custom-select {
@@ -225,7 +225,7 @@ nav {
                 select {
                     width: 100%;
                     font-family: 'Cera Pro Medium';
-                    font-size: 18.8px;
+                    font-size: 15px;
                     color: $warm-grey;
                     cursor: pointer;
                     background-color: transparent;
@@ -359,7 +359,7 @@ nav {
 
         .buttons {
             grid-area: buttons;
-            // text-align: center;
+            text-align: center;
 
             .secondary-btn {
 

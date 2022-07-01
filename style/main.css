@@ -327,8 +327,8 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .home .home-grid .city-box {
   grid-area: city;
-  width: 75%;
-  height: 45px;
+  width: 100%;
+  min-height: 45px;
   background-color: rgba(243, 243, 243, 0.6);
   -webkit-backdrop-filter: blur(35.5px);
   backdrop-filter: blur(35.5px);
@@ -336,7 +336,7 @@ nav.navbar-light .navbar-nav .nav-link {
   margin: auto;
   z-index: 3;
   font-family: "Cera Pro Medium";
-  font-size: 18.8px;
+  font-size: 15px;
   color: #989898;
 }
 .home .home-grid .city-box .custom-select {
@@ -355,7 +355,7 @@ nav.navbar-light .navbar-nav .nav-link {
 .home .home-grid .city-box .custom-select select {
   width: 100%;
   font-family: "Cera Pro Medium";
-  font-size: 18.8px;
+  font-size: 15px;
   color: #989898;
   cursor: pointer;
   background-color: transparent;
@@ -464,6 +464,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .services .services-grid .buttons {
   grid-area: buttons;
+  text-align: center;
 }
 .services .services-grid .buttons .secondary-btn i {
   width: 36px;
@@ -892,35 +893,13 @@ footer .bg-layer {
     font-size: 16.7px;
   }
 
-  .home .home-grid {
-    grid-template-areas: ". imgs" "h1 imgs" "city imgs" "people imgs";
-    grid-template-columns: 45% 55%;
-  }
-  .home .home-grid h1 {
-    text-align: start;
-  }
-  .home .home-grid h1::before {
-    left: 0;
-    transform: none;
-  }
-  .home .home-grid .main-imgs-box .ellipse {
-    transform: scale(0.5);
-  }
-  .home .home-grid .main-imgs-box .ellipse.one {
-    top: -25%;
-    right: 0;
-  }
-  .home .home-grid .main-imgs-box .ellipse.two {
-    top: 15%;
-    right: 65%;
-  }
-  .home .home-grid .people {
-    text-align: start;
-  }
   .home .home-grid .city-box {
-    width: 160%;
-    height: 60px;
+    min-height: 60px;
+    font-size: 18.8px;
     margin-top: 0;
+  }
+  .home .home-grid .city-box .custom-select select {
+    font-size: 18.8px;
   }
 
   .visions .pale-bg .ellipse.one {
@@ -974,6 +953,10 @@ footer .bg-layer {
   }
 }
 @media (min-width: 992px) {
+  header.main-header {
+    text-align: start;
+  }
+
   nav.navbar-light .navbar-brand {
     top: auto;
   }
@@ -1005,7 +988,10 @@ footer .bg-layer {
     font-size: 2.5rem;
   }
   .home .home-grid .city-box {
-    height: 70px;
+    width: 160%;
+  }
+  .home .home-grid .people {
+    text-align: start;
   }
   .home .home-grid .people span.visits {
     display: inline;
@@ -1028,7 +1014,7 @@ footer .bg-layer {
     right: 18px;
     bottom: 114px;
   }
-  header.main-header {
+  .services .services-grid .buttons {
     text-align: start;
   }
 
@@ -1119,7 +1105,7 @@ footer .footer-grid h2 {
     right: 0;
   }
   .home .home-grid .city-box {
-    height: 100px;
+    min-height: 100px;
   }
   .home .home-grid .city-box .main-btn {
     height: 56px;
