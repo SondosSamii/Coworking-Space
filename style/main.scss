@@ -521,21 +521,47 @@ nav {
 
 .solutions {
     position: relative;
+    padding-top: $gutter;
+    padding-bottom: $gutter;
 
-    .carousel-box {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-right: -50px;
+    .solutions-grid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "carousel"
+            "btn";
+        grid-template-columns: 100%;
+        // column-gap: 10%;
+        justify-items: start;
 
-        .item {
-            height: 500px;
+        .main-header {
+            grid-area: header;
+        }
 
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                object-fit: cover;
-                object-position: 5%;
+        .main-btn {
+            grid-area: btn;
+            width: fit-content;
+            margin: auto;
+            // text-align: center;
+        }
+
+        .carousel-box {
+            grid-area: carousel;
+            // overflow-x: hidden;
+            // margin-top: 20px;
+            // margin-bottom: 20px;
+            // margin-right: -50px;
+
+            .item {
+                height: 500px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    object-position: 5%;
+                }
             }
         }
     }
