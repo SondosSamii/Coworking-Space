@@ -19,10 +19,11 @@
     opacity: 0.1;
 }
 
-@mixin mainBanner ($width, $height) {
+// @mixin mainBanner ($width, $height) {
+@mixin mainBanner () {
     width: 100%;
-    max-width: $width;
-    max-height: $height;
+    // max-width: $width;
+    // max-height: $height;
     object-fit: cover;
     border-top-right-radius: 300px;
     border-top-left-radius: 300px;

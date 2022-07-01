@@ -1,3 +1,29 @@
+@media (min-width: 500px) {
+    .home {
+        .home-grid {
+            .main-imgs-box {
+                .ellipse {
+                    transform: scale(0.75);
+
+                    &.one {
+                        top: -15%;
+                        right: 16%;
+                    }
+
+                    &.two {
+                        top: 30%;
+                    }
+
+                    &.three {
+                        top: 15%;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 640px) {
     .solutions .carousel-box {
         margin-right: -150px;
@@ -19,12 +45,47 @@
     }
 
     .home {
-        .people {
-            text-align: start;
+        .home-grid {
+            grid-template-areas:
+                ". imgs"
+                "h1 imgs"
+                "city imgs"
+                "people imgs";
+            grid-template-columns: 45% 55%;
 
-            span.visits {
-                display: inline;
-                margin-left: 20px;
+            h1 {
+                text-align: start;
+
+                &::before {
+                    left: 0;
+                    transform: none;
+                }
+            }
+
+            .main-imgs-box {
+                .ellipse {
+                    transform: scale(0.5);
+
+                    &.one {
+                        top: -25%;
+                        right: 0;
+                    }
+
+                    &.two {
+                        top: 15%;
+                        right: 65%;
+                    }
+                }
+            }
+
+            .people {
+                text-align: start;
+            }
+
+            .city-box {
+                width: 160%;
+                height: 60px;
+                margin-top: 0;
             }
         }
     }
@@ -117,47 +178,58 @@
     }
 
     .home {
-        h1 {
-            font-size: 54px;
-            max-width: 474.3px;
-            text-align: left;
+        .home-grid {
+            grid-template-areas:
+                ". imgs"
+                "h1 imgs"
+                ". imgs"
+                "city imgs"
+                "people imgs";
+            grid-template-columns: 39% 61%;
 
-            &::before {
-                left: auto;
-                transform: translateX(0);
+            h1 {
+                font-size: 2.5rem;
+                text-align: left;
+                margin-bottom: 0;
             }
-        }
 
-        .imgs-box {
-            .main {
-                object-fit: none;
-            }
+            .main-imgs-box {
 
-            .ellipse {
-                &.one {
-                    transform: translate(-58%, -32px);
+                .ellipse {
+                    transform: scale(0.75);
+
+                    &.one {
+                        top: -20%;
+                        right: 5%;
+                    }
+
+                    &.two {
+                        top: 25%;
+                        right: -5%;
+                    }
+
+                    &.three {
+                        right: -5%;
+                    }
                 }
 
-                &.two {
-                    opacity: 1;
-                    transform: translateY(200px);
-                }
-
-                &.three {
-                    opacity: 1;
-                    transform: translate(100px, 126px);
+                .v-text {
+                    font-size: 2.5rem;
                 }
             }
 
-            .v-text {
-                bottom: 0;
-                font-size: 51.2px;
-                transform: rotate(180deg) translateX(-12.5px);
+            .city-box {
+                height: 70px;
             }
-        }
 
-        .people {
-            transform: translateY(-45px);
+            .people {
+
+                span.visits {
+                    display: inline;
+                    margin-left: 20px;
+                }
+
+            }
         }
     }
 
@@ -286,6 +358,41 @@
 }
 
 @media (min-width: 1200px) {
+
+    .home {
+        .home-grid {
+            column-gap: $gutter;
+
+            .main-imgs-box {
+                text-align: start;
+
+                .ellipse {
+                    &.one {
+                        top: -15%;
+                        right: 15%;
+                    }
+
+                    &.two {
+                        top: 25%;
+                        right: 5%;
+                    }
+
+                    &.three {
+                        right: 0;
+                    }
+                }
+            }
+
+            .city-box {
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 54px;
+            }
+        }
+    }
+
     header.main-header {
         h3 {
             font-size: 52.2px;
@@ -314,6 +421,19 @@
         .benefit {
             flex: 1 0 0%;
             width: auto;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .home {
+        .home-grid {
+            .main-imgs-box {
+                .v-text {
+                    font-size: 51.2px;
+                    transform: rotate(180deg) translateX(-12.5px);
+                }
+            }
         }
     }
 }

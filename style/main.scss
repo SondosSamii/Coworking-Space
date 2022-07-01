@@ -117,92 +117,131 @@ nav {
 }
 
 .home {
-    display: grid;
-    align-items: center;
 
-    h1 {
-        font-family: 'Axiforma Bold';
-        line-height: 1.15;
-        text-align: center;
-        color: #000;
-        position: relative;
+    .home-grid {
+        display: grid;
+        grid-template-areas:
+            "h1"
+            "imgs"
+            "city"
+            "people";
+        row-gap: 28px;
+        margin-top: calc($gutter * 2);
 
-        &::before {
-            content: url(../images/home/zigzag-border.svg);
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
-    .imgs-box {
-
-        .main {
-            @include mainBanner(476px, 690px);
-            object-position: center -20px;
-        }
-
-        .ellipse {
-            &.one {
-                transform: scale(0.65) translate(-90%, -70%);
-            }
-
-            &.two {
-                opacity: 0;
-            }
-
-            &.three {
-                opacity: 0;
-            }
-        }
-
-        .v-text {
+        h1 {
+            grid-area: h1;
             font-family: 'Axiforma Bold';
-            font-size: 2.5rem;
-            line-height: 1.31;
+            line-height: 1.15;
+            text-align: center;
             color: #000;
-            position: absolute;
-            bottom: 1rem;
-            transform: rotate(180deg);
-            writing-mode: vertical-lr;
-            opacity: 0.1;
-        }
-    }
+            position: relative;
 
-    .people {
-        text-align: center;
-        position: relative;
-
-        img:not(:first-child) {
-            margin-left: -12px;
-        }
-
-        span {
-            font-family: 'Avenir Roman';
-
-            &.people-num {
+            &::before {
+                content: url(../images/home/zigzag-border.svg);
                 position: absolute;
-                width: 36px;
-                height: 36px;
-                background-color: #13ded2;
-                border: solid 2.1px #fff;
-                border-radius: 50%;
-                margin-left: -16px;
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
 
-                &::after {
-                    content: "\002B 10";
-                    color: #fff;
-                    font-size: 10.4px;
-                    font-weight: 900;
-                    @extend %centerItem;
+        .main-imgs-box {
+            grid-area: imgs;
+            position: relative;
+            margin: auto;
+            text-align: center;
+
+            .main {
+                grid-area: main;
+                width: 70%;
+                background-image: url(../images/home/main-coworking-space.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-right-radius: 300px;
+                border-top-left-radius: 300px;
+                z-index: 1;
+            }
+
+            .ellipse {
+                transform: scale(0.5);
+
+                &.one {
+                    right: -15%;
+                    bottom: 40%;
+                }
+
+                &.two {
+                    top: 30%;
+                    right: 65%;
+                }
+
+                &.three {
+                    top: 15%;
+                    right: 70%;
                 }
             }
 
-            &.visits {
-                display: block;
-                font-size: 12.5px;
+            .v-text {
+                font-family: 'Axiforma Bold';
+                font-size: 2rem;
+                line-height: 1.31;
                 color: #000;
+                position: absolute;
+                bottom: 0;
+                transform: rotate(180deg);
+                writing-mode: vertical-lr;
+                opacity: 0.1;
+            }
+        }
+
+        .city-box {
+            grid-area: city;
+            width: 75%;
+            height: 45px;
+            // background-color: rgba(243, 243, 243, 0.6);
+            background-color: $main-color;
+            -webkit-backdrop-filter: blur(35.5px);
+            backdrop-filter: blur(35.5px);
+            border-radius: 5.2px;
+            margin: auto;
+            z-index: 3;
+        }
+
+        .people {
+            grid-area: people;
+            text-align: center;
+
+            img:not(:first-child) {
+                margin-left: -12px;
+            }
+
+            span {
+                font-family: 'Avenir Roman';
+
+                &.people-num {
+                    position: absolute;
+                    width: 36px;
+                    height: 36px;
+                    background-color: #13ded2;
+                    border: solid 2.1px #fff;
+                    border-radius: 50%;
+                    margin-left: -16px;
+
+                    &::after {
+                        content: "\002B 10";
+                        color: #fff;
+                        font-size: 10.4px;
+                        font-weight: 900;
+                        @extend %centerItem;
+                    }
+                }
+
+                &.visits {
+                    display: block;
+                    font-size: 12.5px;
+                    color: #000;
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -215,7 +254,7 @@ nav {
         }
     }
 
-    .bg-layer {
+    >.bg-layer {
         height: 150vh;
         bottom: auto;
     }
@@ -228,7 +267,8 @@ nav {
     .imgs-box {
 
         .main {
-            @include mainBanner(450.3px, 653px);
+            // @include mainBanner(450.3px, 653px);
+            @include mainBanner();
         }
 
         .calendar {
