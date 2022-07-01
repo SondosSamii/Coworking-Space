@@ -1009,6 +1009,10 @@ footer .bg-layer {
     text-align: left;
     margin-bottom: 0;
   }
+  .home .home-grid h1::before {
+    left: 0;
+    transform: translateX(0);
+  }
   .home .home-grid .main-imgs-box .ellipse {
     transform: scale(0.75);
   }
