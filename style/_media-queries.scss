@@ -24,13 +24,6 @@
     }
 }
 
-@media (min-width: 640px) {
-    .solutions .carousel-box {
-        // margin-right: -150px;
-
-    }
-}
-
 @media (min-width: 768px) {
     header.main-header {
         h2 {
@@ -323,8 +316,6 @@
             }
 
             .carousel-box {
-                // margin-right: -200px;
-
                 .item {
                     max-width: 532.8px;
                     height: calc(100vh - 32px);
