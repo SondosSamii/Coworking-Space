@@ -88,10 +88,18 @@ function getLocation(e) {
 }
 
 var myModalEl = document.getElementById("locationModal");
-myModalEl.addEventListener("show.bs.modal", function (event) {
-  window.scrollTo(0, 0);
-});
+myModalEl.addEventListener(
+  "show.bs.modal",
+  function (event) {
+    window.scrollTo(0, 0);
+  },
+  { passive: true }
+);
 
-myModalEl.addEventListener("hidden.bs.modal", function (event) {
-  document.body.style.overflowY = "visible";
-});
+myModalEl.addEventListener(
+  "hidden.bs.modal",
+  function (event) {
+    document.body.style.overflowY = "visible";
+  },
+  { passive: true }
+);
