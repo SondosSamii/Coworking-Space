@@ -10,6 +10,7 @@ window.onload = () => {
 
 $(".owl-carousel").owlCarousel({
   loop: true,
+  dots: false,
   margin: 10,
   responsive: {
     0: {
