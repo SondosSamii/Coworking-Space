@@ -59,13 +59,11 @@ function moreUpdates(e) {
   }, 3000);
 }
 
-let cities = [];
-
 function fetchCities() {
   fetch("cities.json")
     .then((res) => res.json())
     .then((data) => {
-      cities = data;
+      let cities = data;
       makeCityOptions(cities);
     })
     .catch((err) => console.error(err));
