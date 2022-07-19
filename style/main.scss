@@ -345,6 +345,7 @@ nav {
 
                     &.calendar {
                         width: 90px;
+                        border-radius: 5px;
                     }
 
                     &.alarm {
@@ -535,6 +536,7 @@ nav {
             "carousel"
             "btn";
         grid-template-columns: 100%;
+        row-gap: calc($gutter / 2);
 
         .main-header {
             grid-area: header;

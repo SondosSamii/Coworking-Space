@@ -464,6 +464,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .services .services-grid .imgs-box .calendar-box img.calendar {
   width: 90px;
+  border-radius: 5px;
 }
 .services .services-grid .imgs-box .calendar-box img.alarm {
   width: 45px;
@@ -647,6 +648,7 @@ nav.navbar-light .navbar-nav .nav-link {
   display: grid;
   grid-template-areas: "header" "carousel" "btn";
   grid-template-columns: 100%;
+  row-gap: 1rem;
 }
 .solutions .solutions-grid .main-header {
   grid-area: header;
@@ -965,6 +967,9 @@ footer .bg-layer {
   }
   .visions .visions-grid .pale-bg .ellipse.four {
     transform: scale(0.75) translate(25%, -90%);
+  }
+  .visions .visions-grid .main-btn {
+    margin: 0;
   }
 
   .environment {
