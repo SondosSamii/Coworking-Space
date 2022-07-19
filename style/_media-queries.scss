@@ -7,7 +7,7 @@
 
                     &.one {
                         top: -15%;
-                        right: 16%;
+                        right: 8%;
                     }
 
                     &.two {
@@ -53,6 +53,7 @@
                 .custom-select {
                     select {
                         font-size: 18.8px;
+                        padding-left: 24px;
                     }
                 }
             }
@@ -236,15 +237,8 @@
             .imgs-box {
                 width: 100%;
 
-                .calendar {
-
-                    right: -68px;
-                    bottom: 36px;
-                }
-
-                .alarm {
-                    right: 18px;
-                    bottom: 114px;
+                .calendar-box {
+                    right: -60px;
                 }
             }
 

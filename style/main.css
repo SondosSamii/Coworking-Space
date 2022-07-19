@@ -361,7 +361,7 @@ nav.navbar-light .navbar-nav .nav-link {
   background-color: transparent;
   border: none;
   appearance: none;
-  padding: 8px 0 8px 24px;
+  padding: 8px 0 8px 16px;
 }
 .home .home-grid .city-box .custom-select select:focus-visible {
   outline: none;
@@ -444,20 +444,23 @@ nav.navbar-light .navbar-nav .nav-link {
   border-top-right-radius: 300px;
   border-top-left-radius: 300px;
 }
-.services .services-grid .imgs-box .calendar {
+.services .services-grid .imgs-box .calendar-box {
   position: absolute;
-  width: 90px;
-  right: -36px;
-  bottom: 10px;
+  bottom: 36px;
+  right: -30px;
+}
+.services .services-grid .imgs-box .calendar-box img {
   box-shadow: 3.1px 6.3px 20.9px 0 rgba(0, 0, 0, 0.08);
 }
-.services .services-grid .imgs-box .alarm {
-  position: absolute;
+.services .services-grid .imgs-box .calendar-box img.calendar {
+  width: 90px;
+}
+.services .services-grid .imgs-box .calendar-box img.alarm {
   width: 45px;
-  right: 30px;
-  bottom: 80px;
+  position: absolute;
+  top: -15px;
+  left: -20px;
   border-radius: 50%;
-  box-shadow: 3.1px 6.3px 20.9px 0 rgba(0, 0, 0, 0.08);
 }
 .services .services-grid header.main-header {
   grid-area: header;
@@ -900,7 +903,7 @@ footer .bg-layer {
   }
   .home .home-grid .main-imgs-box .ellipse.one {
     top: -15%;
-    right: 16%;
+    right: 8%;
   }
   .home .home-grid .main-imgs-box .ellipse.two {
     top: 30%;
@@ -932,6 +935,7 @@ footer .bg-layer {
   }
   .home .home-grid .city-box .custom-select select {
     font-size: 18.8px;
+    padding-left: 24px;
   }
 
   .visions .visions-grid {
@@ -1048,13 +1052,8 @@ footer .bg-layer {
   .services .services-grid .imgs-box {
     width: 100%;
   }
-  .services .services-grid .imgs-box .calendar {
-    right: -68px;
-    bottom: 36px;
-  }
-  .services .services-grid .imgs-box .alarm {
-    right: 18px;
-    bottom: 114px;
+  .services .services-grid .imgs-box .calendar-box {
+    right: -60px;
   }
   .services .services-grid .buttons {
     text-align: start;

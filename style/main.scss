@@ -231,7 +231,7 @@ nav {
                     background-color: transparent;
                     border: none;
                     appearance: none;
-                    padding: 8px 0 8px 24px;
+                    padding: 8px 0 8px 16px;
 
                     &:focus-visible {
                         outline: none;
@@ -334,22 +334,27 @@ nav {
                 @include mainBanner();
             }
 
-            .calendar {
+            .calendar-box {
                 position: absolute;
-                width: 90px;
-                right: -36px;
-                bottom: 10px;
-                box-shadow: $light-box-shadow;
-            }
+                bottom: 36px;
+                right: -30px;
 
-            .alarm {
-                position: absolute;
+                img {
+                    box-shadow: $light-box-shadow;
 
-                width: 45px;
-                right: 30px;
-                bottom: 80px;
-                border-radius: 50%;
-                box-shadow: $light-box-shadow;
+
+                    &.calendar {
+                        width: 90px;
+                    }
+
+                    &.alarm {
+                        width: 45px;
+                        position: absolute;
+                        top: -15px;
+                        left: -20px;
+                        border-radius: 50%;
+                    }
+                }
             }
         }
 
