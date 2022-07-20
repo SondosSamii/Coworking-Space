@@ -5,6 +5,7 @@ function toggleLoader(loaderId) {
 
 window.onload = () => {
   toggleLoader("loader");
+  let cities = [];
   fetchCities();
 };
 
@@ -64,7 +65,7 @@ function fetchCities() {
   fetch("cities.json")
     .then((res) => res.json())
     .then((data) => {
-      let cities = data;
+      cities = data;
       makeCityOptions(cities);
     })
     .catch((err) => console.error(err));
