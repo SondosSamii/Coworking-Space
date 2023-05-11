@@ -89,7 +89,7 @@ function getLocation(e) {
   document.getElementById("locationFrame").setAttribute("src", city.location);
 }
 
-var myModalEl = document.getElementById("locationModal");
+const myModalEl = document.getElementById("locationModal");
 myModalEl.addEventListener(
   "show.bs.modal",
   function (event) {
