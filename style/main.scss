@@ -91,7 +91,7 @@ nav {
             left: 50%;
             transform: translateX(-50%);
             margin: 0;
-            font-family: 'Cera Pro Medium';
+            font-family: 'Cera Pro Medium', sans-serif;
             font-size: 29.3px;
             font-weight: 500;
             color: #000;
@@ -107,7 +107,7 @@ nav {
             text-align: center;
 
             .nav-link {
-                font-family: 'Cera Pro Medium';
+                font-family: 'Cera Pro Medium', sans-serif;
                 font-size: 16.7px;
                 text-transform: uppercase;
                 color: $main-grey;
@@ -130,7 +130,7 @@ nav {
 
         h1 {
             grid-area: h1;
-            font-family: 'Axiforma Bold';
+            font-family: 'Axiforma Bold', sans-serif;
             line-height: 1.15;
             text-align: center;
             color: #000;
@@ -182,7 +182,7 @@ nav {
             }
 
             .v-text {
-                font-family: 'Axiforma Bold';
+                font-family: 'Axiforma Bold', sans-serif;
                 font-size: 2rem;
                 line-height: 1.31;
                 color: #000;
@@ -204,7 +204,7 @@ nav {
             border-radius: 5.2px;
             margin: auto;
             z-index: 3;
-            font-family: 'Cera Pro Medium';
+            font-family: 'Cera Pro Medium', sans-serif;
             font-size: 15px;
             color: $warm-grey;
 
@@ -224,7 +224,7 @@ nav {
 
                 select {
                     width: 100%;
-                    font-family: 'Cera Pro Medium';
+                    font-family: 'Cera Pro Medium', sans-serif;
                     font-size: 15px;
                     color: $warm-grey;
                     cursor: pointer;
@@ -254,7 +254,7 @@ nav {
             }
 
             span {
-                font-family: 'Avenir Roman';
+                font-family: 'Avenir Roman', sans-serif;
 
                 &.people-num {
                     position: absolute;
@@ -717,7 +717,7 @@ nav {
 
                 header.sub-header {
                     h4 {
-                        font-family: 'Gilroy SemiBold';
+                        font-family: 'Gilroy SemiBold', sans-serif;
                         font-size: 14px;
                         letter-spacing: 0.74px;
                         color: $main-color;
@@ -725,7 +725,7 @@ nav {
                     }
 
                     h5 {
-                        font-family: 'Gilroy SemiBold';
+                        font-family: 'Gilroy SemiBold', sans-serif;
                         font-size: 18.8px;
                         letter-spacing: 1px;
                         color: #000;
@@ -733,7 +733,7 @@ nav {
                     }
 
                     p {
-                        font-family: 'Avenir Roman';
+                        font-family: 'Avenir Roman', sans-serif;
                         font-size: 16px;
                         line-height: 1.75;
                         color: #7a7878;
@@ -751,7 +751,7 @@ nav {
 
                 .secondary-btn {
                     height: fit-content;
-                    font-family: 'Gilroy SemiBold';
+                    font-family: 'Gilroy SemiBold', sans-serif;
                     font-size: 16px;
                     letter-spacing: 0.85px;
                 }
@@ -793,7 +793,7 @@ footer {
             grid-area: brand;
 
             a {
-                font-family: 'Cera Pro Medium';
+                font-family: 'Cera Pro Medium', sans-serif;
                 font-size: 29.3px;
                 color: #000;
                 text-decoration: none;
@@ -802,7 +802,7 @@ footer {
             }
 
             p {
-                font-family: 'Gilroy Regular';
+                font-family: 'Gilroy Regular', sans-serif;
                 font-size: 16.7px;
                 line-height: 1.85;
                 color: #000;
@@ -839,7 +839,7 @@ footer {
         }
 
         h2 {
-            font-family: 'Gilroy SemiBold';
+            font-family: 'Gilroy SemiBold', sans-serif;
             font-size: 20.9px;
             color: $main-color;
             margin-bottom: 10px;
@@ -853,7 +853,7 @@ footer {
                     margin-bottom: 10px;
 
                     a {
-                        font-family: 'Gilroy Regular';
+                        font-family: 'Gilroy Regular', sans-serif;
                         font-size: 15.7px;
                         color: #000;
                         text-decoration: none;

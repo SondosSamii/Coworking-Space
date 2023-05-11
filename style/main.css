@@ -79,6 +79,7 @@
 }
 
 .imgs-box {
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   margin: auto;
@@ -254,7 +255,7 @@ nav.navbar-light .navbar-brand {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-family: "Cera Pro Medium";
+  font-family: "Cera Pro Medium", sans-serif;
   font-size: 29.3px;
   font-weight: 500;
   color: #000;
@@ -266,7 +267,7 @@ nav.navbar-light .navbar-nav {
   text-align: center;
 }
 nav.navbar-light .navbar-nav .nav-link {
-  font-family: "Cera Pro Medium";
+  font-family: "Cera Pro Medium", sans-serif;
   font-size: 16.7px;
   text-transform: uppercase;
   color: #686c75;
@@ -280,7 +281,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .home .home-grid h1 {
   grid-area: h1;
-  font-family: "Axiforma Bold";
+  font-family: "Axiforma Bold", sans-serif;
   line-height: 1.15;
   text-align: center;
   color: #000;
@@ -325,7 +326,7 @@ nav.navbar-light .navbar-nav .nav-link {
   right: 70%;
 }
 .home .home-grid .main-imgs-box .v-text {
-  font-family: "Axiforma Bold";
+  font-family: "Axiforma Bold", sans-serif;
   font-size: 2rem;
   line-height: 1.31;
   color: #000;
@@ -345,7 +346,7 @@ nav.navbar-light .navbar-nav .nav-link {
   border-radius: 5.2px;
   margin: auto;
   z-index: 3;
-  font-family: "Cera Pro Medium";
+  font-family: "Cera Pro Medium", sans-serif;
   font-size: 15px;
   color: #989898;
 }
@@ -364,19 +365,22 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .home .home-grid .city-box .custom-select select {
   width: 100%;
-  font-family: "Cera Pro Medium";
+  font-family: "Cera Pro Medium", sans-serif;
   font-size: 15px;
   color: #989898;
   cursor: pointer;
   background-color: transparent;
   border: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 8px 0 8px 16px;
 }
 .home .home-grid .city-box .custom-select select:focus-visible {
   outline: none;
 }
 .home .home-grid .city-box .main-btn {
+  height: -moz-fit-content;
   height: fit-content;
   padding: 0.3rem 0.5rem;
 }
@@ -388,7 +392,7 @@ nav.navbar-light .navbar-nav .nav-link {
   margin-left: -12px;
 }
 .home .home-grid .people span {
-  font-family: "Avenir Roman";
+  font-family: "Avenir Roman", sans-serif;
 }
 .home .home-grid .people span.people-num {
   position: absolute;
@@ -450,7 +454,8 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .services .services-grid .imgs-box .main {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-right-radius: 300px;
   border-top-left-radius: 300px;
 }
@@ -591,6 +596,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .visions .main-btn {
   grid-area: mainBtn;
+  width: -moz-fit-content;
   width: fit-content;
   padding-right: 2rem;
   padding-left: 2rem;
@@ -655,6 +661,7 @@ nav.navbar-light .navbar-nav .nav-link {
 }
 .solutions .solutions-grid .main-btn {
   grid-area: btn;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
 }
@@ -668,8 +675,10 @@ nav.navbar-light .navbar-nav .nav-link {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
-  object-position: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5%;
+     object-position: 5%;
 }
 
 .benefits {
@@ -700,7 +709,8 @@ nav.navbar-light .navbar-nav .nav-link {
   grid-template-areas: "header header header" "square-1 rect-1 rect-1" "rect-2 rect-2 square-2" "banner banner banner";
   grid-template-rows: repeat(3, auto) minmax(auto, 230px);
   row-gap: 0.6666666667rem;
-  column-gap: 0.6666666667rem;
+  -moz-column-gap: 0.6666666667rem;
+       column-gap: 0.6666666667rem;
 }
 .gallery .gallery-grid header.main-header {
   grid-area: header;
@@ -724,8 +734,10 @@ nav.navbar-light .navbar-nav .nav-link {
 .gallery .gallery-grid img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .environment {
@@ -761,6 +773,7 @@ nav.navbar-light .navbar-nav .nav-link {
   row-gap: 24px;
 }
 .updates .updates-grid .update {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #fffafa;
   display: grid;
@@ -793,21 +806,21 @@ nav.navbar-light .navbar-nav .nav-link {
   padding: 1rem;
 }
 .updates .updates-grid .update .content header.sub-header h4 {
-  font-family: "Gilroy SemiBold";
+  font-family: "Gilroy SemiBold", sans-serif;
   font-size: 14px;
   letter-spacing: 0.74px;
   color: #fd5b2f;
   text-transform: uppercase;
 }
 .updates .updates-grid .update .content header.sub-header h5 {
-  font-family: "Gilroy SemiBold";
+  font-family: "Gilroy SemiBold", sans-serif;
   font-size: 18.8px;
   letter-spacing: 1px;
   color: #000;
   text-transform: capitalize;
 }
 .updates .updates-grid .update .content header.sub-header p {
-  font-family: "Avenir Roman";
+  font-family: "Avenir Roman", sans-serif;
   font-size: 16px;
   line-height: 1.75;
   color: #7a7878;
@@ -821,8 +834,9 @@ nav.navbar-light .navbar-nav .nav-link {
   overflow: hidden;
 }
 .updates .updates-grid .update .content .secondary-btn {
+  height: -moz-fit-content;
   height: fit-content;
-  font-family: "Gilroy SemiBold";
+  font-family: "Gilroy SemiBold", sans-serif;
   font-size: 16px;
   letter-spacing: 0.85px;
 }
@@ -833,6 +847,7 @@ nav.navbar-light .navbar-nav .nav-link {
   margin: 3rem auto;
 }
 .updates .loader {
+  width: -moz-fit-content;
   width: fit-content;
   height: auto;
   margin: 3rem auto 0;
@@ -846,7 +861,8 @@ footer {
 footer .footer-grid {
   display: grid;
   grid-template-areas: "brand brand" "company partnership" "social social";
-  column-gap: 0.6666666667rem;
+  -moz-column-gap: 0.6666666667rem;
+       column-gap: 0.6666666667rem;
   row-gap: 0.6666666667rem;
   justify-items: center;
   text-align: center;
@@ -855,7 +871,7 @@ footer .footer-grid .brand {
   grid-area: brand;
 }
 footer .footer-grid .brand a {
-  font-family: "Cera Pro Medium";
+  font-family: "Cera Pro Medium", sans-serif;
   font-size: 29.3px;
   color: #000;
   text-decoration: none;
@@ -863,7 +879,7 @@ footer .footer-grid .brand a {
   margin-bottom: 10px;
 }
 footer .footer-grid .brand p {
-  font-family: "Gilroy Regular";
+  font-family: "Gilroy Regular", sans-serif;
   font-size: 16.7px;
   line-height: 1.85;
   color: #000;
@@ -890,7 +906,7 @@ footer .footer-grid .social-media ul a {
   color: #fd5b2f;
 }
 footer .footer-grid h2 {
-  font-family: "Gilroy SemiBold";
+  font-family: "Gilroy SemiBold", sans-serif;
   font-size: 20.9px;
   color: #fd5b2f;
   margin-bottom: 10px;
@@ -899,7 +915,7 @@ footer .footer-grid ul:not(.social-media ul) li {
   margin-bottom: 10px;
 }
 footer .footer-grid ul:not(.social-media ul) li a {
-  font-family: "Gilroy Regular";
+  font-family: "Gilroy Regular", sans-serif;
   font-size: 15.7px;
   color: #000;
   text-decoration: none;
@@ -934,12 +950,10 @@ footer .bg-layer {
     font-size: 48px;
     line-height: 1.25;
   }
-
   button {
     height: 56px;
     font-size: 16.7px;
   }
-
   .home .home-grid .city-box {
     min-height: 60px;
     font-size: 18.8px;
@@ -949,7 +963,6 @@ footer .bg-layer {
     font-size: 18.8px;
     padding-left: 24px;
   }
-
   .visions .visions-grid {
     display: grid;
     grid-template-areas: "header header" "content paleBg" "mainBtn paleBg";
@@ -971,19 +984,18 @@ footer .bg-layer {
   .visions .visions-grid .main-btn {
     margin: 0;
   }
-
   .environment {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
   .environment .environment-grid {
     grid-template-areas: "header header header" "banner banner ." "banner banner buttons" "banner banner .";
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
   .environment .environment-grid .main-banner {
     width: 75%;
   }
-
   .updates .updates-grid .update {
     grid-template-areas: "pic content ";
     grid-template-columns: 191px minmax(auto, 317px);
@@ -994,10 +1006,10 @@ footer .bg-layer {
   .updates .updates-grid .update .content {
     padding: 24px 6px 24px 0;
   }
-
   footer .footer-grid {
     grid-template-areas: "brand company partnership" "social company partnership";
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     row-gap: 1rem;
     justify-items: start;
     text-align: start;
@@ -1013,11 +1025,9 @@ footer .bg-layer {
   header.main-header {
     text-align: start;
   }
-
   nav.navbar-light .navbar-brand {
     top: auto;
   }
-
   .home .home-grid {
     grid-template-areas: ". imgs" "h1 imgs" ". imgs" "city imgs" "people imgs";
     grid-template-columns: 39% 61%;
@@ -1058,11 +1068,11 @@ footer .bg-layer {
     display: inline;
     margin-left: 20px;
   }
-
   .services .services-grid {
     grid-template-areas: "banner ." "banner header" "banner ." "banner buttons" "banner .";
     grid-template-columns: 40% 50%;
-    column-gap: 7%;
+    -moz-column-gap: 7%;
+         column-gap: 7%;
   }
   .services .services-grid .imgs-box {
     width: 100%;
@@ -1073,11 +1083,11 @@ footer .bg-layer {
   .services .services-grid .buttons {
     text-align: start;
   }
-
   .visions .visions-grid {
     grid-template-areas: "header paleBg" "content paleBg" "mainBtn paleBg";
     grid-template-columns: 50% 40%;
-    column-gap: 7%;
+    -moz-column-gap: 7%;
+         column-gap: 7%;
   }
   .visions .visions-grid .pale-bg {
     width: 100%;
@@ -1107,11 +1117,11 @@ footer .bg-layer {
     background-position: 35% 75%;
     background-size: auto;
   }
-
   .solutions .solutions-grid {
     grid-template-areas: ". carousel" "header carousel" ". carousel" "btn carousel" ". carousel";
     grid-template-columns: 55% 45%;
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     justify-items: start;
   }
   .solutions .solutions-grid .main-btn {
@@ -1121,19 +1131,19 @@ footer .bg-layer {
     max-width: 532.8px;
     height: calc(100vh - 32px);
   }
-
   .gallery .gallery-grid {
     grid-template-areas: "header header header header" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
     grid-template-rows: repeat(3, auto);
     row-gap: 1rem;
-    column-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
-
   .environment .environment-grid {
     grid-template-areas: "header header header banner banner" "header header header banner banner" "header header header banner banner" "buttons buttons buttons banner banner";
     grid-template-columns: repeat(5, 1fr);
     row-gap: 2rem;
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
   .environment .environment-grid header.main-header {
     text-align: start;
@@ -1141,25 +1151,26 @@ footer .bg-layer {
   .environment .environment-grid .main-banner {
     width: 100%;
   }
-
   .updates .updates-grid {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
-
   footer .footer-grid {
     grid-template-areas: "brand company partnership social";
-    column-gap: 4rem;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
     grid-template-columns: minmax(auto, 300px) repeat(2, auto) minmax(210px, auto);
   }
   footer .footer-grid .brand a,
-footer .footer-grid h2 {
+  footer .footer-grid h2 {
     margin-bottom: 24px;
   }
 }
 @media (min-width: 1200px) {
   .home .home-grid {
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
   .home .home-grid .main-imgs-box {
     text-align: start;
@@ -1185,20 +1196,18 @@ footer .footer-grid h2 {
   .home .home-grid h1 {
     font-size: 54px;
   }
-
   header.main-header h3 {
     font-size: 52.2px;
     line-height: 1.36;
   }
-
   .solutions .solutions-grid {
     grid-template-columns: 50% 50%;
   }
-
   .gallery .gallery-grid {
     grid-template-areas: "header header header banner" "square-1 rect-1 rect-1 banner" "rect-2 rect-2 square-2 banner";
     row-gap: 2rem;
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
   .gallery .gallery-grid header.main-header {
     text-align: start;
@@ -1215,6 +1224,4 @@ footer .footer-grid h2 {
     font-size: 51.2px;
     transform: rotate(180deg) translateX(-12.5px);
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
