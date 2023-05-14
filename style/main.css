@@ -355,9 +355,9 @@ nav.navbar-light .navbar-nav .nav-link {
   position: relative;
 }
 .home .home-grid .city-box .custom-select::before {
-  content: "\f3c5";
   position: absolute;
   font-family: "Font Awesome 6 Free";
+  content: "\f3c5";
   font-weight: 900;
   top: 50%;
   transform: translateY(-50%);
