@@ -3,9 +3,9 @@ function toggleLoader(loaderId) {
   document.body.style.overflowY = "visible";
 }
 
+let cities = [];
 window.onload = () => {
   toggleLoader("loader");
-  let cities = [];
   fetchCities();
 };
 
