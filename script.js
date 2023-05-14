@@ -33,9 +33,12 @@ $(".owl-carousel").owlCarousel({
 function toggleParagraph(e) {
   const par = e.target.parentNode.querySelector(".sub-header p");
 
-  par.classList.contains("hide-overflow")
-    ? (e.target.innerHTML = "Read Less")
-    : (e.target.innerHTML = `Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>`);
+  if (par.classList.contains("hide-overflow")) {
+    e.target.innerHTML = "Read Less";
+  } else {
+    e.target.innerHTML = `Read More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>`;
+  }
+
   par.classList.toggle("hide-overflow");
 }
 
