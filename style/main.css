@@ -108,17 +108,17 @@ header.main-header {
   text-align: center;
 }
 header.main-header h2 {
-  font-family: "Gilroy SemiBold";
+  font-family: "Gilroy SemiBold", sans-serif;
   color: #fd5b2f;
   text-transform: uppercase;
 }
 header.main-header h3 {
-  font-family: "Gilroy Medium";
+  font-family: "Gilroy Medium", sans-serif;
   color: #000;
   margin-bottom: 20px;
 }
 header.main-header p {
-  font-family: "Avenir Roman";
+  font-family: "Avenir Roman", sans-serif;
   font-size: 15px;
   font-weight: 500;
   line-height: 2.36;
@@ -126,12 +126,12 @@ header.main-header p {
 }
 
 header.sub-header h4 {
-  font-family: "Gilroy Medium";
+  font-family: "Gilroy Medium", sans-serif;
   font-size: 16.7px;
   color: #000;
 }
 header.sub-header p {
-  font-family: "Avenir Book";
+  font-family: "Avenir Book", sans-serif;
   font-size: 13.6px;
   line-height: 1.84;
   color: #000;
@@ -139,7 +139,7 @@ header.sub-header p {
 
 button {
   height: 45px;
-  font-family: "Gilroy Medium";
+  font-family: "Gilroy Medium", sans-serif;
   font-size: 14px;
   transition: all 0.3s ease-in-out;
 }
